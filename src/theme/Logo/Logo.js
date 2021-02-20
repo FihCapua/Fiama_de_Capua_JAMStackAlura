@@ -7,7 +7,7 @@ export function Logo() {
             preserveAspectRatio="xMidYMid meet">
 
             <g transform="translate(0.000000,200.000000) scale(0.100000,-0.100000)"
-                fill="#dd5fff" stroke="none">
+                fill="#e1a7f9" stroke="none">
                 <path d="M895 1885 c-27 -7 -76 -25 -107 -39 -32 -14 -104 -37 -160 -51 -57
                 -15 -121 -34 -143 -44 -50 -22 -110 -87 -163 -177 -23 -38 -69 -100 -103 -139
                 -84 -96 -113 -160 -113 -250 0 -90 0 -280 0 -370 0 -88 28 -152 109 -248 32

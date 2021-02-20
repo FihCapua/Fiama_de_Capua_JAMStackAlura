@@ -17,7 +17,7 @@ const colors = {
     },
     primary: {
       main: {
-        color: '#0c0d28',
+        color: '#140f3c',
         contrastText: '#dd5fff',
       },
     },
@@ -55,4 +55,5 @@ export default {
     borderRadius: '5px',
     fontFamily: '\'DM Mono\', sans-serif',
     transition: 'all 200ms ease-in-out 0s',
+    boxShadow: '#020208 6px 6px 4px',
   }

@@ -1,6 +1,8 @@
 import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
 import Capa from '../src/components/commons/CapaWrapper';
 import NavBar from '../src/components/commons/Cabecalho';
+import About from '../src/components/commons/AboutWrapper';
+import Portfolio from '../src/components/commons/ProjectsWrapper';
 import Footer from '../src/components/commons/Footer';
 
 export default function Home() {
@@ -14,6 +16,8 @@ export default function Home() {
       <BackgroundWrapper>
         <Capa />
         <NavBar />
+        <About />
+        <Portfolio />
         <Footer />
       </BackgroundWrapper>
     </div>

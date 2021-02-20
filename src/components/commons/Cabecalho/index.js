@@ -7,7 +7,11 @@ export default function Menu() {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/sobre'
+      url: '/projetos'
+    },
+    {
+      texto: 'Projetos',
+      url: '/projetos'
     },
     {
       texto: 'Contato',

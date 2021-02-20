@@ -20,7 +20,7 @@ export const typographyVariants = {
     paragraph1: {
       fontSize: '16px',
       fontWeight: '400',
-      lineHeight: 1.25, // 125%
+      lineHeight: 1.60, // 125%
     },
     // [paragraph2]
     paragraph2: {

@@ -8,7 +8,7 @@ export const NavBar = styled.nav`
   flex-wrap: wrap;
   font-family: ${({ theme }) => theme.fontFamily};
   background-color: ${function(props) {
-    return props.theme.colors.primary.main.color
+    return props.theme.colors.tertiary.light.color
   }};
   padding: 0px 10px;
 
@@ -58,14 +58,14 @@ NavBar.RightSide = styled.div`
     }
     a {
       color: ${function(props) {
-        return props.theme.colors.secondary.main.contrastText
+        return props.theme.colors.tertiary.light.contrastText
       }};
       text-decoration: none;
       transition: ${({ theme }) => theme.transition};
       &:hover,
       &:focus {
         color: ${function(props) {
-          return props.theme.colors.tertiary.light.contrastText
+          return props.theme.colors.secondary.main.contrastText
         }}
       }
     }

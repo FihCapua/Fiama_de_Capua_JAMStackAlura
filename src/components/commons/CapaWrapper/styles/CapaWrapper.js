@@ -3,7 +3,10 @@ import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
 
 export const CapaWrapper = styled.div`
-    padding: 50px 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 CapaWrapper.Content = styled.div`

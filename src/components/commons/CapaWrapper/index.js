@@ -13,8 +13,8 @@ export default function Capa() {
       </CapaWrapper.Subtitle>
         <CapaWrapper.Paragraph>
           Projetando e construindo páginas web.<br />
-        Espremendo os neurônios com HTML, CSS, JS e agora com React.<br />
-        Mas no final sempre da certo!
+          Espremendo os miolos com  HTML, CSS, JS e React.<br />
+          Mas no final sempre da certo!
       </CapaWrapper.Paragraph>
       </CapaWrapper.Content>
     </CapaWrapper>
