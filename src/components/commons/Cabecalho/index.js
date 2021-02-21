@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { NavBar } from './styles/NavBar';
 import { Logo } from '../../../theme/Logo/Logo';
@@ -7,17 +8,17 @@ export default function Menu() {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/projetos'
+      url: '/projetos',
     },
     {
       texto: 'Projetos',
-      url: '/projetos'
+      url: '/projetos',
     },
     {
       texto: 'Contato',
-      url: '/contato'
-    }
-  ]
+      url: '/contato',
+    },
+  ];
 
   return (
     <NavBar>
@@ -26,18 +27,16 @@ export default function Menu() {
       </NavBar.LeftSide>
       <NavBar.RightSide>
         {/* Percorrendo os links com map */}
-        {links.map(function (link) {
-          return (
-            <ul key='1'>
-              <li key={link.url}>
-                <Text tag="a" variant="paragraph2" href={link.url}>
-                  {link.texto}
-                </Text>
-              </li>
-            </ul>
-          )
-        })}
+        {links.map((link) => (
+          <ul key="1">
+            <li key={link.url}>
+              <Text tag="a" variant="paragraph2" href={link.url}>
+                {link.texto}
+              </Text>
+            </li>
+          </ul>
+        ))}
       </NavBar.RightSide>
     </NavBar>
-  )
+  );
 }

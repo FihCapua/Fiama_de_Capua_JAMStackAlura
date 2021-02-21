@@ -1,15 +1,14 @@
-import theme from '../index';
 import { css } from 'styled-components';
+import theme from '../index';
 
-const { breakpoints } = theme;
+export const { breakpoints } = theme;
 
 export function breakPointsMedia(cssByBreakpoints) {
-    const breakpointsName = Object.keys(cssByBreakpoints);
-    return breakpointsName.map((breakpointsName) => {
-        return css`
+  const breakpointsName = Object.keys(cssByBreakpoints);
+  // eslint-disable-next-line no-shadow
+  return breakpointsName.map((breakpointsName) => css`
             @media screen and (min-width: ${breakpoints[breakpointsName]}px) {
                 ${cssByBreakpoints[breakpointsName]}
             }
-        `
-    })
+        `);
 }

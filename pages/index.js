@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-filename-extension */
+/* eslint-disable react/react-in-jsx-scope */
 import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
 import Capa from '../src/components/commons/CapaWrapper';
 import NavBar from '../src/components/commons/Cabecalho';
@@ -12,7 +14,8 @@ export default function Home() {
       flexWrap: 'wrap',
       flexDirection: 'column',
       justifyContent: 'space-between',
-    }}>
+    }}
+    >
       <BackgroundWrapper>
         <Capa />
         <NavBar />
@@ -21,5 +24,5 @@ export default function Home() {
         <Footer />
       </BackgroundWrapper>
     </div>
-  )
+  );
 }

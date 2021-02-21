@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
@@ -8,8 +9,8 @@ export const AboutWrapper = styled.div`
     flex-wrap: wrap;
     margin: -5px 0;
     background-color: ${function (props) {
-        return props.theme.colors.primary.main.color
-    }};  
+    return props.theme.colors.primary.main.color;
+  }};  
     padding-bottom: 50px;
 `;
 
@@ -17,8 +18,8 @@ AboutWrapper.Title = styled.div`
     width: 100%;
     text-align: center;
     color: ${function (props) {
-        return props.theme.colors.primary.main.contrastText
-    }};
+    return props.theme.colors.primary.main.contrastText;
+  }};
     ${TextStylesVariantsMap.title}
     padding: 35px 0;
 `;
@@ -28,13 +29,13 @@ AboutWrapper.Content = styled.div`
     justify-content: center;
 
     ${breakPointsMedia({
-        xs: css`
+    xs: css`
             flex-wrap: wrap;
         `,
-        md: css`
+    md: css`
             flex-wrap: nowrap;
         `,
-    })}
+  })}
 `;
 
 AboutWrapper.Image = styled.img`
@@ -45,34 +46,34 @@ AboutWrapper.Image = styled.img`
     box-shadow: ${({ theme }) => theme.boxShadow};
 
     ${breakPointsMedia({
-        md: css`
+    md: css`
             width: 250px;
             height: 250px;
             margin: 40px 15px;
         `,
-    })}
+  })}
 `;
 
 AboutWrapper.Text = styled.p`
     color: ${function (props) {
-        return props.theme.colors.secondary.main.color
-    }};
+    return props.theme.colors.secondary.main.color;
+  }};
     ${TextStylesVariantsMap.paragraph1}
     text-align: justify;
     margin: 60px 60px;
 
     ${breakPointsMedia({
-        xs: css`
+    xs: css`
             width: 65%;
         `,
-        md: css`
+    md: css`
             width: 50%;
         `,
-        lg: css`
+    lg: css`
             width: 45%;
         `,
-        xl: css`
+    xl: css`
             width: 30%;
         `,
-    })}
+  })}
 `;

@@ -1,3 +1,5 @@
+/* eslint-disable func-names */
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
 import { TextStylesVariantsMap } from '../../../../foundation/Text';
 
@@ -8,7 +10,7 @@ export const Card = styled.div`
     margin: 0 25px;
 `;
 
-Card.CardImageFront = styled.img`
+Card.CardImage = styled.img`
     width: 250px;
     height: 200px;
     border-radius: ${({ theme }) => theme.borderRadius};
@@ -22,10 +24,10 @@ Card.CardImageFront = styled.img`
     }
 `;
 
-Card.CardImageText = styled.p`
+Card.CardText = styled.p`
     color: ${function (props) {
-        return props.theme.colors.tertiary.main.contrastText
-    }};
+    return props.theme.colors.tertiary.main.contrastText;
+  }};
     text-align: center;
     ${TextStylesVariantsMap.paragraph1}
     text-decoration: none;
