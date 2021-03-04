@@ -31,7 +31,7 @@ export const NavBar = styled.nav`
 `;
 
 NavBar.LeftSide = styled.div`
-  margin: -30px 0;
+  margin: -9px 0;
 
   ${breakPointsMedia({
     xs: css`
@@ -42,10 +42,10 @@ NavBar.LeftSide = styled.div`
         `,
     lg: css`
           width: 65%;
-          margin: -30px 170px;
+          margin: -9px 170px;
         `,
     xl: css`
-          margin: -30px 170px;
+          margin: -9px 170px;
         `,
   })}
 `;
