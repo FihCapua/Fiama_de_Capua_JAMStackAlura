@@ -8,15 +8,15 @@ export default function Menu() {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/projetos',
+      url: '/about',
     },
     {
       texto: 'Projetos',
-      url: '/projetos',
+      url: '/projects',
     },
     {
       texto: 'Contato',
-      url: '/contato',
+      url: '/contact',
     },
   ];
 
