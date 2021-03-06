@@ -55,5 +55,5 @@ export default {
   borderRadius: '5px',
   fontFamily: '\'DM Mono\', sans-serif',
   transition: 'all 200ms ease-in-out 0s',
-  boxShadow: '#020208 6px 6px 4px',
+  boxShadow: '#020208 -2px 5px 5px',
 };

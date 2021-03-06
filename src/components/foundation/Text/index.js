@@ -14,11 +14,21 @@ export const TextStylesVariantsMap = {
         font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
     `,
+  paragraph2: css`
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.paragraph2.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.paragraph2.lineHeight};
+`,
   subTitle: css`
         font-size: ${({ theme }) => theme.typographyVariants.subTitle.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
     `,
+  smallestException: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
+`,
 };
 
 const TextBase = styled.span`
