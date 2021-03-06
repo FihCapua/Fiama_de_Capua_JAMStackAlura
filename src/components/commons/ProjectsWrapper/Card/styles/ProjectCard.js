@@ -1,13 +1,41 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { TextStylesVariantsMap } from '../../../../foundation/Text';
+import { breakPointsMedia } from '../../../../../theme/utils/breakpointsMedia';
 
 export const Card = styled.div`
     display: grid;
+    width: 100%;
     grid-template-columns: 70%;
     justify-content: center;
-    margin: 40px 0 100px 0;    
+    margin: 40px 0 100px 0;   
+
+    ${breakPointsMedia({
+    xs: css`
+            gap: 80px;
+            margin: 40px 0 15px 0;
+    `,
+    sm: css`
+            width: 100%;
+            gap: 150px;
+            margin: 40px 0 30px 0;
+        `,
+    md: css`
+            width: 100%;
+            grid-template-columns: 90%;
+            margin: 40px 0 30px 0;
+        `,
+    lg: css`
+            width: 100%;
+            grid-template-columns: 80%;
+        `,
+    xl: css`
+            width: 100%;
+            grid-template-columns: 70%;
+            margin: 40px 0 150px 0;
+    `,
+  })} 
 `;
 
 Card.Left = styled.div`
@@ -23,6 +51,24 @@ Card.Left = styled.div`
         transform: scale(1.1);
         transition: transform 0.5s ease;
     }
+
+    ${breakPointsMedia({
+    xs: css`
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        `,
+    md: css`
+            width: 300px;
+        `,
+    lg: css`
+            width: 350px
+        `,
+    xl: css`
+            width:400px;
+    `,
+  })} 
 `;
 
 Card.Right = styled.div`
@@ -37,11 +83,52 @@ Card.Right = styled.div`
         transform: scale(1.1);
         transition: transform 0.5s ease;
     }
+
+    ${breakPointsMedia({
+    xs: css`
+            width: 85%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        `,
+    md: css`
+            width: 300px;
+        `,
+    lg: css`
+            width: 350px
+        `,
+    xl: css`
+            width:400px;
+    `,
+  })} 
 `;
 
 Card.CardImage = styled.img`
     width: 400px;
     height: 310px;
+
+    ${breakPointsMedia({
+    xs: css`
+            width: 180px;
+            height: 150px;
+        `,
+    sm: css`
+            width: 250px;
+            height: 200px;
+        `,
+    md: css`
+            width: 300px;
+            height: 250px;
+        `,
+    lg: css`
+            width: 350px;
+            height: 300px;
+        `,
+    xl: css`
+            width:400px;
+            height: 350px;
+    `,
+  })} 
 `;
 
 Card.CardTitle = styled.p`
@@ -71,4 +158,28 @@ Card.CardText = styled.p`
     padding: 20px;
     margin: -5px 0;
     border-radius: ${({ theme }) => theme.borderRadius};
+
+    ${breakPointsMedia({
+    xs: css`
+            padding: 10px;
+            width: 183px;
+        `,
+    sm: css`
+            padding: 15px;
+            width: 255px;
+        `,
+    md: css`
+            padding: 18px;
+            width: 300px;
+        `,
+    lg: css`
+            padding: 20px;
+            width: 360px;
+        `,
+    xl: css`
+            padding: 20px;
+            width: 400px;
+            ${TextStylesVariantsMap.paragraph1}
+    `,
+  })} 
 `;
