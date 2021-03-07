@@ -5,7 +5,7 @@ import Capa from '../src/components/commons/CapaWrapper';
 import NavBar from '../src/components/commons/Cabecalho';
 import About from '../src/components/commons/AboutWrapper';
 import Portfolio from '../src/components/commons/ProjectsWrapper';
-import Contact from '../src/components/ContactWrapper';
+import Contact from '../src/components/commons/ContactWrapper';
 import Footer from '../src/components/commons/Footer';
 
 export default function Home() {

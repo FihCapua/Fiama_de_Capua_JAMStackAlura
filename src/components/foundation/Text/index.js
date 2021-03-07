@@ -33,13 +33,23 @@ export const TextStylesVariantsMap = {
     font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
     line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
 `,
+  smallestParagraph: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallestParagraph.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallestParagraph.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallestParagraph.lineHeight};
+    margin-left: ${({ theme }) => theme.typographyVariants.smallestParagraph.marginLeft};
+`,
 };
 
 const TextBase = styled.span`
         ${(props) => TextStylesVariantsMap[props.variant]}
 `;
 
-export default function Text({ tag, variant, children }) {
+export default function Text({
+  tag,
+  variant,
+  children,
+}) {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <TextBase
@@ -56,7 +66,7 @@ Text.propTypes = {
   // eslint-disable-next-line react/require-default-props
   tag: PropTypes.string.isRequired,
   variant: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
 // padrões
@@ -64,4 +74,5 @@ Text.defaultProps = {
   // eslint-disable-next-line react/default-props-match-prop-types
   tag: 'span',
   variant: 'paragraph1',
+  children: null,
 };
