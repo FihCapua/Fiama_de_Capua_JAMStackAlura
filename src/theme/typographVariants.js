@@ -13,14 +13,14 @@ export const typographyVariants = {
   },
   // [subTitle]
   subTitle: {
-    fontSize: '20px',
-    fontWeight: '100',
+    fontSize: '18px',
+    fontWeight: '400',
     lineHeight: 1.25, // 125%
   },
   // [paragraph1]
   paragraph1: {
     fontSize: '16px',
-    fontWeight: '400',
+    fontWeight: '500',
     lineHeight: 1.60, // 125%
   },
   // [paragraph2]
@@ -31,6 +31,7 @@ export const typographyVariants = {
   },
   // [smallestException]
   smallestException: {
+<<<<<<< HEAD
 <<<<<<< Updated upstream
     fontSize: '12px',
     fontWeight: '400',
@@ -40,5 +41,10 @@ export const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1.5, // 150%
 >>>>>>> Stashed changes
+=======
+    fontSize: '14px',
+    fontWeight: '400',
+    lineHeight: 1.5, // 105%
+>>>>>>> 43f5921397e57c10e14f9393e9583affb95bdf30
   },
 };

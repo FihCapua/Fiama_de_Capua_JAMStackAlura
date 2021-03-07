@@ -6,7 +6,7 @@ import SectionTitle from './SectionTitle/index';
 
 export default function Portfolio() {
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projects">
       <SectionTitle />
       <ProjectCard />
     </ProjectsWrapper>

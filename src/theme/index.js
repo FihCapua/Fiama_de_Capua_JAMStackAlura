@@ -62,9 +62,13 @@ export default {
   fontFamily: '\'DM Mono\', sans-serif',
 <<<<<<< Updated upstream
   transition: 'all 200ms ease-in-out 0s',
+<<<<<<< HEAD
   boxShadow: '#020208 6px 6px 4px',
 =======
   transition: '200ms ease-in-out',
   boxShadow: '#020208 -2px 5px 5px',
 >>>>>>> Stashed changes
+=======
+  boxShadow: '#020208 -2px 5px 5px',
+>>>>>>> 43f5921397e57c10e14f9393e9583affb95bdf30
 };
