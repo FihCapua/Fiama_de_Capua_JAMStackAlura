@@ -1,8 +1,11 @@
 import React from 'react';
-// eslint-disable-next-line import/no-cycle
 import { ContactWrapper } from './styles/ContactWrapper';
+import Modal from '../commons/Modal';
+import { Box } from '../foundation/Layout/Box';
+// eslint-disable-next-line import/no-cycle
 
 export default function Contact() {
+  const [isModalOpen, setModalState] = React.useState(false);
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <ContactWrapper>
@@ -15,7 +18,31 @@ export default function Contact() {
         e de acordo com a sua necessidade?
         Bora lá!
       </ContactWrapper.Text>
-      <ContactWrapper.Button>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setModalState(false);
+        }}
+      >
+        {(propsDoModal) => (
+          <Box
+            backgroundColor="white"
+            // eslint-disable-next-line react/jsx-props-no-spreading
+            {...propsDoModal}
+          >
+            <div>
+              Teste!
+            </div>
+          </Box>
+        )}
+      </Modal>
+
+      <ContactWrapper.Button
+        onClick={() => {
+          setModalState(!isModalOpen);
+        }}
+      >
         Entre em Contato
       </ContactWrapper.Button>
     </ContactWrapper>
