@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
@@ -14,7 +15,7 @@ export const AboutWrapper = styled.div`
     padding-bottom: 50px;
 `;
 
-AboutWrapper.Title = styled.div`
+AboutWrapper.Title = styled.h2`
     width: 100%;
     text-align: center;
     color: ${function (props) {

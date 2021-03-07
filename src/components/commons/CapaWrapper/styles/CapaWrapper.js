@@ -26,10 +26,10 @@ CapaWrapper.Content = styled.div`
 
     ${breakPointsMedia({
     xs: css`
-            width: 95%;
+            width: 90%;
         `,
     md: css`
-            width: 85%;
+            width: 70%;
         `,
     lg: css`
             width: 55%;
@@ -46,6 +46,21 @@ CapaWrapper.Title = styled.h1`
     return props.theme.colors.primary.main.contrastText;
   }};
     ${TextStylesVariantsMap.title}
+
+    ${breakPointsMedia({
+    xs: css`
+            ${TextStylesVariantsMap.titleXS}
+        `,
+    md: css`
+            ${TextStylesVariantsMap.title}
+        `,
+    lg: css`
+            ${TextStylesVariantsMap.title}
+        `,
+    xl: css`
+            ${TextStylesVariantsMap.title}
+        `,
+  })}
 `;
 
 CapaWrapper.Subtitle = styled.h2`
@@ -64,4 +79,18 @@ CapaWrapper.Paragraph = styled.p`
     margin-top: 25px;
     text-align: center;
     ${TextStylesVariantsMap.paragraph1}
+    ${breakPointsMedia({
+    xs: css`
+            ${TextStylesVariantsMap.paragraph2}
+        `,
+    md: css`
+            ${TextStylesVariantsMap.paragraph1}
+        `,
+    lg: css`
+            ${TextStylesVariantsMap.paragraph1}
+        `,
+    xl: css`
+            ${TextStylesVariantsMap.paragraph1}
+        `,
+  })}
 `;

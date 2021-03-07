@@ -8,7 +8,11 @@ export const TextStylesVariantsMap = {
         font-weight: ${({ theme }) => theme.typographyVariants.title.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.title.lineHeight};
     `,
-
+  titleXS: css`
+        font-size: ${({ theme }) => theme.typographyVariants.titleXS.fontSize};
+        font-weight: ${({ theme }) => theme.typographyVariants.titleXS.fontWeight};
+        line-height: ${({ theme }) => theme.typographyVariants.titleXS.lineHeight};
+  `,
   paragraph1: css`
         font-size: ${({ theme }) => theme.typographyVariants.paragraph1.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};

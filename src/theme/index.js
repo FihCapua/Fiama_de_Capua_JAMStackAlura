@@ -15,6 +15,12 @@ const colors = {
       color: '#ba60f3',
     },
   },
+  button: {
+    main: {
+      color: '#ca6ded',
+      contrastText: '#14133c',
+    },
+  },
   primary: {
     main: {
       color: '#140f3c',
@@ -47,13 +53,18 @@ export default {
   typographyVariants,
   breakpoints: {
     xs: 0,
-    sm: 480,
+    sm: 425,
     md: 768,
     lg: 1024,
     xl: 1360,
   },
   borderRadius: '5px',
   fontFamily: '\'DM Mono\', sans-serif',
+<<<<<<< Updated upstream
   transition: 'all 200ms ease-in-out 0s',
   boxShadow: '#020208 6px 6px 4px',
+=======
+  transition: '200ms ease-in-out',
+  boxShadow: '#020208 -2px 5px 5px',
+>>>>>>> Stashed changes
 };

@@ -30,7 +30,7 @@ export default function Menu() {
         {links.map((link) => (
           <ul key="1">
             <li key={link.url}>
-              <Text tag="a" variant="paragraph2" href={link.url}>
+              <Text tag="a" variant="paragraph1" href={link.url}>
                 {link.texto}
               </Text>
             </li>
