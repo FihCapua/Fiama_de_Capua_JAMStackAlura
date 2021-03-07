@@ -1,11 +1,12 @@
 import React from 'react';
 import { ContactWrapper } from './styles/ContactWrapper';
-import Modal from '../commons/Modal';
-import { Box } from '../foundation/Layout/Box';
+import Modal from '../Modal';
+import FormCadastro from '../../patterns/FormCadastro';
+import { Button } from '../Button';
 // eslint-disable-next-line import/no-cycle
 
 export default function Contact() {
-  const [isModalOpen, setModalState] = React.useState(false);
+  const [isModalOpen, setModalState] = React.useState(true);
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <ContactWrapper>
@@ -15,7 +16,7 @@ export default function Contact() {
       <ContactWrapper.Text>
         Vamos criar juntos uma solução para o seu projeto,
         <br />
-        e de acordo com a sua necessidade?
+        de acordo com a sua necessidade?
         Bora lá!
       </ContactWrapper.Text>
 
@@ -26,25 +27,17 @@ export default function Contact() {
         }}
       >
         {(propsDoModal) => (
-          <Box
-            backgroundColor="white"
-            // eslint-disable-next-line react/jsx-props-no-spreading
-            {...propsDoModal}
-          >
-            <div>
-              Teste!
-            </div>
-          </Box>
+          <FormCadastro propsDoModal={propsDoModal} />
         )}
       </Modal>
 
-      <ContactWrapper.Button
+      <Button
         onClick={() => {
           setModalState(!isModalOpen);
         }}
       >
-        Entre em Contato
-      </ContactWrapper.Button>
+        Clique Aqui!
+      </Button>
     </ContactWrapper>
   );
 }
