@@ -1,11 +1,23 @@
 import React from 'react';
+import { Lottie } from '@crello/react-lottie';
 import { Button } from '../../commons/Button';
 import TextField, { TextArea } from '../../commons/forms/TextField';
 import { Box } from '../../foundation/Layout/Box';
 import { Grid } from '../../foundation/Layout/Grid';
 import Text from '../../foundation/Text';
+import successAnimation from './animations/success.json';
+import errorAnimation from './animations/error.json';
+
+const formStates = {
+  DEFAULT: 'DEFAULT',
+  LOADING: 'LOADING',
+  DONE: 'DONE',
+  ERROR: 'ERROR',
+};
 
 function FormContent() {
+  const [isFormSubmited, setIsFormSubmited] = React.useState(false);
+  const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
   const [userInfo, setUserInfo] = React.useState({
     name: '',
     email: '',
@@ -28,6 +40,7 @@ function FormContent() {
   function emailIsInvalid() {
     return userInfo.email.length > 0 && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(userInfo.email);
   }
+
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <form
@@ -39,6 +52,35 @@ function FormContent() {
       }}
       onSubmit={(event) => {
         event.preventDefault();
+
+        setIsFormSubmited(true);
+
+        const userDTO = {
+          name: userInfo.name,
+          email: userInfo.email,
+          message: userInfo.message,
+        };
+
+        // eslint-disable-next-line no-unused-expressions
+        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userDTO),
+        })
+          .then((respostaDoServidor) => {
+            if (respostaDoServidor.ok) {
+              respostaDoServidor.json();
+            }
+            throw new Error('Não foi possível cadastrar o usuário');
+          })
+          .then((respostaConvertidaEmObjeto) => {
+            setSubmissionStatus(formStates.DONE);
+          })
+          .catch((error) => {
+            setSubmissionStatus(formStates.DONE);
+          });
       }}
     >
       <div>
@@ -89,6 +131,39 @@ function FormContent() {
       >
         Envie sua mensagem
       </Button>
+
+      {isFormSubmited && submissionStatus === formStates.DONE && (
+        <Box
+          display="flex"
+          justifyContent="center"
+          margin="15px 0"
+        >
+          <Lottie
+            width="50px"
+            height="50px"
+            className="lottie-container basic"
+            config={{ animationData: successAnimation, loop: false, autoplay: true }}
+          />
+          <p>Dados enviados com sucesso</p>
+        </Box>
+      )}
+
+      {isFormSubmited && submissionStatus === formStates.ERROR && (
+      <Box
+        display="flex"
+        justifyContent="center"
+        margin="15px 0"
+      >
+        <Lottie
+          width="50px"
+          height="50px"
+          className="lottie-container basic"
+          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+        />
+        <p>Erro no envio dos dados</p>
+      </Box>
+      )}
+
     </form>
   );
 }
@@ -107,9 +182,12 @@ export default function FormCadastro({ propsDoModal }) {
         paddingRight={{ md: '0' }}
         flex={1}
         value={{ xs: 12, md: 5, lg: 4 }}
-        height="40px"
+        height={{
+          xs: '430px',
+        }}
       >
         <Box
+          height="500px"
           borderRadius="8px"
           boxShadow="18px 4px 24px #070713"
           display="flex"

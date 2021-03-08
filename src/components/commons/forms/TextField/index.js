@@ -21,7 +21,7 @@ const Input = styled.input`
 
 const TextAreaMsg = styled.textarea`
   width: 73%;
-  height: 100px;
+  height: 75px;
   padding: 12px 16px;
   outline: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
