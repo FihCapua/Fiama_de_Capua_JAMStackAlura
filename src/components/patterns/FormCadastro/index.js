@@ -78,9 +78,18 @@ function FormContent() {
           })
           .then(() => {
             setSubmissionStatus(formStates.DONE);
+            // eslint-disable-next-line no-console
+            console.log(respostaConvertidaEmObjeto);
           })
+<<<<<<< HEAD
           .catch(() => {
             setSubmissionStatus(formStates.DONE);
+=======
+          .catch((error) => {
+            setSubmissionStatus(formStates.ERROR);
+            // eslint-disable-next-line no-console
+            console.log(error);
+>>>>>>> 842765b08dc69609832273cabdd336fb854d7755
           });
       }}
     >
