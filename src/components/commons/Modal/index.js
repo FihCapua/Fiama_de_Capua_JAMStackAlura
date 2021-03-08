@@ -57,7 +57,7 @@ function Modal({ isOpen, onClose, children }) {
       <motion.div
         variants={{
           visible: {
-            y: 300,
+            y: 170,
           },
           hidden: {
             y: 640,

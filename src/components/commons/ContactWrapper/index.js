@@ -6,7 +6,7 @@ import { Button } from '../Button';
 // eslint-disable-next-line import/no-cycle
 
 export default function Contact() {
-  const [isModalOpen, setModalState] = React.useState(true);
+  const [isModalOpen, setModalState] = React.useState(false);
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <ContactWrapper>

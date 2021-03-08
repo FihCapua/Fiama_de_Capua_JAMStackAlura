@@ -1,11 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const SVG = styled.svg`
     position: relative;
     top: 0;
     left: 64%;
     stroke: ${({ theme }) => theme.colors.tertiary.light.color};
+    ${breakPointsMedia({
+    xs: css`
+            left: 80%;
+        `,
+    md: css`
+            left: 64%;
+        `,
+  })}
 `;
 
 export function CloseButton() {
