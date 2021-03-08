@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/jsx-filename-extension */
@@ -6,6 +7,7 @@ import Head from 'next/head';
 import theme from '../src/theme';
 import { GlobalStyle } from '../src/theme/GlobalStyle';
 
+// eslint-disable-next-line react/prop-types
 export default function App({ Component, pageProps }) {
   return (
     <>
