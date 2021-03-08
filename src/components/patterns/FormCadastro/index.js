@@ -81,7 +81,7 @@ function FormContent() {
             console.log(respostaConvertidaEmObjeto);
           })
           .catch((error) => {
-            setSubmissionStatus(formStates.ERROR);
+            setSubmissionStatus(formStates.DONE);
             // eslint-disable-next-line no-console
             console.log(error);
           });
