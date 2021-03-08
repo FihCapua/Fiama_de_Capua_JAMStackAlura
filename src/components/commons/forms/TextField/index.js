@@ -20,13 +20,13 @@ const Input = styled.input`
 `;
 
 const TextAreaMsg = styled.textarea`
-  width: 73%;
+  width: 78%;
   height: 75px;
   padding: 12px 16px;
   outline: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-top: 2px;
-  margin-left: 38px;
+  margin-left: 29px;
 `;
 
 Input.defaultProps = {

@@ -77,9 +77,13 @@ function FormContent() {
           })
           .then((respostaConvertidaEmObjeto) => {
             setSubmissionStatus(formStates.DONE);
+            // eslint-disable-next-line no-console
+            console.log(respostaConvertidaEmObjeto);
           })
           .catch((error) => {
-            setSubmissionStatus(formStates.DONE);
+            setSubmissionStatus(formStates.ERROR);
+            // eslint-disable-next-line no-console
+            console.log(error);
           });
       }}
     >
@@ -188,6 +192,7 @@ export default function FormCadastro({ propsDoModal }) {
       >
         <Box
           height="500px"
+          margin="0 -10px"
           borderRadius="8px"
           boxShadow="18px 4px 24px #070713"
           display="flex"
