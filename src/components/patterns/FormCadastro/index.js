@@ -69,17 +69,21 @@ function FormContent() {
           },
           body: JSON.stringify(userDTO),
         })
-          .then((respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-              respostaDoServidor.json();
+          .then((serverResponse) => {
+            if (serverResponse.ok) {
+              serverResponse.json();
             }
             throw new Error('Não foi possível cadastrar o usuário');
           })
-          .then((respostaConvertidaEmObjeto) => {
+          .then((serverResponseObject) => {
             setSubmissionStatus(formStates.DONE);
+            // eslint-disable-next-line no-console
+            console.log(serverResponseObject);
           })
           .catch((error) => {
-            setSubmissionStatus(formStates.DONE);
+            setSubmissionStatus(formStates.ERROR);
+            // eslint-disable-next-line no-console
+            console.error(error);
           });
       }}
     >
