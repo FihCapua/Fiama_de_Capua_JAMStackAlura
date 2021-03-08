@@ -1,7 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-import { TextStylesVariantsMap } from '../../foundation/Text';
+import { TextStylesVariantsMap } from '../../../foundation/Text/index';
 
 export const ContactWrapper = styled.div`
     display: flex;
@@ -31,25 +31,4 @@ ContactWrapper.Text = styled.p`
     return props.theme.colors.secondary.main.color;
   }};
     ${TextStylesVariantsMap.paragraph1}
-`;
-
-ContactWrapper.Button = styled.button`
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  background-color: ${function (props) {
-    return props.theme.colors.button.main.color;
-  }}; 
-  color: ${function (props) {
-    return props.theme.colors.button.main.contrastText;
-  }};
-  border-radius: ${function (props) {
-    return props.theme.borderRadius;
-  }};  
-  transition: opacity ${({ theme }) => theme.transition};
-  ${TextStylesVariantsMap.paragraph2};
-  &:hover,
-  &:focus {
-    opacity: .5;
-  }
 `;

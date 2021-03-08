@@ -35,4 +35,10 @@ export const typographyVariants = {
     fontWeight: '400',
     lineHeight: 1.5, // 150%
   },
+  smallestParagraph: {
+    fontSize: '11px',
+    fontWeight: '400',
+    lineHeight: 1.5, // 150%
+    marginLeft: '22px',
+  },
 };
