@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
 import { Lottie } from '@crello/react-lottie';
 import { Button } from '../../commons/Button';
 import TextField, { TextArea } from '../../commons/forms/TextField';
@@ -76,20 +75,15 @@ function FormContent() {
             }
             throw new Error('Não foi possível cadastrar o usuário');
           })
-          .then(() => {
+          .then((respostaConvertidaEmObjeto) => {
             setSubmissionStatus(formStates.DONE);
             // eslint-disable-next-line no-console
             console.log(respostaConvertidaEmObjeto);
           })
-<<<<<<< HEAD
-          .catch(() => {
-            setSubmissionStatus(formStates.DONE);
-=======
           .catch((error) => {
             setSubmissionStatus(formStates.ERROR);
             // eslint-disable-next-line no-console
             console.log(error);
->>>>>>> 842765b08dc69609832273cabdd336fb854d7755
           });
       }}
     >

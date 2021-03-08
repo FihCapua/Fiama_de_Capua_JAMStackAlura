@@ -6,10 +6,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
-    "custom-script": "node ./script-test.js"
+    "custom-script": "node ./script-test.js",
+    "commit": "cz"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
+    "commitizen": "^4.2.3",
     "framer-motion": "^3.10.0",
     "next": "^10.0.8",
     "prop-types": "^15.7.2",
@@ -21,7 +23,10 @@
     "styled-normalize": "^8.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.0.1",
+    "@commitlint/config-conventional": "^12.0.1",
     "babel-plugin-styled-components": "^1.8.0",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.22.1",
@@ -36,5 +41,10 @@
       "pre-push": "yarn lint"
     }
   },
-  "license": "MIT"
+  "license": "MIT",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
