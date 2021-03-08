@@ -1,4 +1,5 @@
 import React from 'react';
+// eslint-disable-next-line import/no-unresolved
 import { Lottie } from '@crello/react-lottie';
 import { Button } from '../../commons/Button';
 import TextField, { TextArea } from '../../commons/forms/TextField';
