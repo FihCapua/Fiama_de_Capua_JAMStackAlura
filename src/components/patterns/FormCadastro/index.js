@@ -5,6 +5,7 @@ import TextField, { TextArea } from '../../commons/forms/TextField';
 import { Box } from '../../foundation/Layout/Box';
 import { Grid } from '../../foundation/Layout/Grid';
 import Text from '../../foundation/Text';
+import loadingAnimation from './animations/loading.json';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
 
@@ -16,7 +17,7 @@ const formStates = {
 };
 
 function FormContent() {
-  const [isFormSubmited, setIsFormSubmited] = React.useState(false);
+  const [isFormSubmited, setIsFormSubmited] = React.useState(true);
   const [submissionStatus, setSubmissionStatus] = React.useState(formStates.DEFAULT);
   const [userInfo, setUserInfo] = React.useState({
     name: '',
@@ -61,30 +62,33 @@ function FormContent() {
           message: userInfo.message,
         };
 
-        // eslint-disable-next-line no-unused-expressions
-        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userDTO),
-        })
-          .then((respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-              respostaDoServidor.json();
-            }
-            throw new Error('Não foi possível cadastrar o usuário');
+        setSubmissionStatus(formStates.LOADING);
+        setTimeout(() => {
+          // eslint-disable-next-line no-unused-expressions
+          fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(userDTO),
           })
-          .then((respostaConvertidaEmObjeto) => {
-            setSubmissionStatus(formStates.DONE);
-            // eslint-disable-next-line no-console
-            console.log(respostaConvertidaEmObjeto);
-          })
-          .catch((error) => {
-            setSubmissionStatus(formStates.DONE);
-            // eslint-disable-next-line no-console
-            console.log(error);
-          });
+            .then((response) => {
+              if (response.ok) {
+                return response.json();
+              }
+              throw new Error('Não foi possível cadastrar o usuário');
+            })
+            .then((respostaConvertidaEmObjeto) => {
+              setSubmissionStatus(formStates.DONE);
+              // eslint-disable-next-line no-console
+              console.log(respostaConvertidaEmObjeto);
+            })
+            .catch((error) => {
+              setSubmissionStatus(formStates.ERROR);
+              // eslint-disable-next-line no-console
+              console.log(error);
+            });
+        }, 3000);
       }}
     >
       <div>
@@ -135,6 +139,22 @@ function FormContent() {
       >
         Envie sua mensagem
       </Button>
+
+      {isFormSubmited && submissionStatus === formStates.LOADING && (
+        <Box
+          display="flex"
+          justifyContent="center"
+          margin="15px 0"
+        >
+          <Lottie
+            width="50px"
+            height="50px"
+            className="lottie-container basic"
+            config={{ animationData: loadingAnimation, loop: false, autoplay: true }}
+          />
+          <p>Enviando seus dados, aguarde...</p>
+        </Box>
+      )}
 
       {isFormSubmited && submissionStatus === formStates.DONE && (
         <Box
