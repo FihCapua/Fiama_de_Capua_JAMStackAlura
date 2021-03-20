@@ -7,7 +7,7 @@ export default function About() {
     // eslint-disable-next-line react/jsx-filename-extension
     <AboutWrapper>
       <AboutWrapper.Title>
-        Sobre Mim
+        Quem sou eu?
       </AboutWrapper.Title>
       <AboutWrapper.Content>
         <AboutWrapper.Image />
