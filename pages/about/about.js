@@ -1,10 +1,10 @@
 /* eslint-disable max-len */
-/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { AboutWrapper } from './styles/AboutWrapper';
 
 export default function About() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <AboutWrapper>
       <AboutWrapper.Title>
         Sobre Mim
