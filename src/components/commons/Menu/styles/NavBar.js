@@ -58,21 +58,6 @@ NavBar.RightSide = styled.div`
     li { 
       cursor: pointer;
     }
-    a {
-      color: ${function (props) {
-    return props.theme.colors.tertiary.light.contrastText;
-  }};
-      text-decoration: none;
-      transition: ${({ theme }) => theme.transition};
-      &:hover,
-      &:focus {
-        color: ${function (props) {
-    return props.theme.colors.secondary.main.contrastText;
-  }}
-      }
-    }
-    ${TextStylesVariantsMap.smallestException};
-
     ${breakPointsMedia({
     xs: css`
           display: flex;
