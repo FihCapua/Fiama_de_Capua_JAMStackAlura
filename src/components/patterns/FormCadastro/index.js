@@ -1,10 +1,10 @@
 import React from 'react';
 import { Lottie } from '@crello/react-lottie';
-import { Button } from '../../commons/Button';
+import Text from '../../foundation/Text';
 import TextField, { TextArea } from '../../commons/forms/TextField';
 import { Box } from '../../foundation/Layout/Box';
 import { Grid } from '../../foundation/Layout/Grid';
-import Text from '../../foundation/Text';
+import { Button } from '../../commons/Button';
 import loadingAnimation from './animations/loading.json';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';

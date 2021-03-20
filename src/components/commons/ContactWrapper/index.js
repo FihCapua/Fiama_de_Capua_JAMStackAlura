@@ -2,8 +2,8 @@
 import React from 'react';
 import { ContactWrapper } from './styles/ContactWrapper';
 import Modal from '../Modal';
-import { Button } from '../Button';
 import FormCadastro from '../../patterns/FormCadastro';
+import { Button } from '../Button';
 
 export default function Contact() {
   const [isModalOpen, setModalState] = React.useState(false);
