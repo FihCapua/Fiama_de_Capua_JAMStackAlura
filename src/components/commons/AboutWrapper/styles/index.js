@@ -1,13 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
-<<<<<<< HEAD:pages/about/styles/AboutWrapper.js
-import { breakPointsMedia } from '../../../src/theme/utils/breakpointsMedia';
-import { TextStylesVariantsMap } from '../../../src/components/foundation/Text';
-=======
 import { TextStylesVariantsMap } from '../../../foundation/Text';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
->>>>>>> 66668d31a9ee34c72c7c36ebf8b9c745d4d76df9:src/components/commons/AboutWrapper/styles/index.js
 
 export const AboutWrapper = styled.div`
     display: flex;

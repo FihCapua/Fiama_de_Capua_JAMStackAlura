@@ -76,7 +76,7 @@ function FormContent() {
             }
             throw new Error('Não foi possível cadastrar o usuário');
           })
-          .then(() => {
+          .then((respostaConvertidaEmObjeto) => {
             setSubmissionStatus(formStates.DONE);
             // eslint-disable-next-line no-console
             console.log(respostaConvertidaEmObjeto);

@@ -6,12 +6,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ignore-path .gitignore .",
-    "custom-script": "node ./script-test.js",
-    "commit": "cz"
+    "custom-script": "node ./script-test.js"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
-    "commitizen": "^4.2.3",
     "framer-motion": "^3.10.0",
     "next": "^10.0.8",
     "prop-types": "^15.7.2",
