@@ -5,10 +5,10 @@ import NextLink from 'next/link';
 import PropTypes from 'prop-types';
 
 const StyledLink = styled.a`
+  text-decoration: none;
   color:${function (props) {
     return props.theme.colors.tertiary.light.contrastText;
   }};
-   text-decoration: none;
       transition: ${({ theme }) => theme.transition};
       &:hover,
       &:focus {

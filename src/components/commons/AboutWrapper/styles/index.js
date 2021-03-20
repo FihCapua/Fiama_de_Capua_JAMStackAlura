@@ -1,8 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
-import { breakPointsMedia } from '../../../src/theme/utils/breakpointsMedia';
-import { TextStylesVariantsMap } from '../../../src/components/foundation/Text';
+import { TextStylesVariantsMap } from '../../../foundation/Text';
+import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const AboutWrapper = styled.div`
     display: flex;
@@ -48,9 +48,9 @@ AboutWrapper.Image = styled.img`
 
     ${breakPointsMedia({
     md: css`
+            margin: 40px 15px;
             width: 250px;
             height: 250px;
-            margin: 40px 15px;
         `,
   })}
 `;

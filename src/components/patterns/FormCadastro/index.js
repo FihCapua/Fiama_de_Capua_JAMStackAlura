@@ -76,7 +76,7 @@ function FormContent() {
             }
             throw new Error('Não foi possível cadastrar o usuário');
           })
-          .then(() => {
+          .then((respostaConvertidaEmObjeto) => {
             setSubmissionStatus(formStates.DONE);
             // eslint-disable-next-line no-console
             console.log(respostaConvertidaEmObjeto);
@@ -257,8 +257,4 @@ export default function FormCadastro({ propsDoModal }) {
       </Grid.Col>
     </Grid.Row>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5bfd82aac93813612345fa20ccb45874a6ff6505

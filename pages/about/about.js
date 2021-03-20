@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { AboutWrapper } from './styles/AboutWrapper';
+import { AboutWrapper } from '../../src/components/commons/AboutWrapper/styles';
 
 export default function About() {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <AboutWrapper>
       <AboutWrapper.Title>
-        Sobre Mim
+        SObre Mim
       </AboutWrapper.Title>
       <AboutWrapper.Content>
         <AboutWrapper.Image />

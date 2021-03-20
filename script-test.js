@@ -1,4 +1,4 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
+// eslint-disable-next-line import/no-unresolved
 const shell = require('shelljs');
 
 const result = shell.exec('git diff --name-only branch-scripts-test..main', { silent: true });
