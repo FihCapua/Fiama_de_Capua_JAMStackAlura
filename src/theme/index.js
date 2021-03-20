@@ -60,11 +60,6 @@ export default {
   },
   borderRadius: '5px',
   fontFamily: '\'DM Mono\', sans-serif',
-<<<<<<< Updated upstream
-  transition: 'all 200ms ease-in-out 0s',
-  boxShadow: '#020208 6px 6px 4px',
-=======
   transition: '200ms ease-in-out',
   boxShadow: '#020208 -2px 5px 5px',
->>>>>>> Stashed changes
 };

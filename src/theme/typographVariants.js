@@ -13,14 +13,14 @@ export const typographyVariants = {
   },
   // [subTitle]
   subTitle: {
-    fontSize: '20px',
-    fontWeight: '100',
+    fontSize: '18px',
+    fontWeight: '400',
     lineHeight: 1.25, // 125%
   },
   // [paragraph1]
   paragraph1: {
     fontSize: '16px',
-    fontWeight: '400',
+    fontWeight: '500',
     lineHeight: 1.60, // 125%
   },
   // [paragraph2]
@@ -31,14 +31,14 @@ export const typographyVariants = {
   },
   // [smallestException]
   smallestException: {
-<<<<<<< Updated upstream
-    fontSize: '12px',
-    fontWeight: '400',
-    lineHeight: 1, // 100%
-=======
     fontSize: '11px',
     fontWeight: '400',
     lineHeight: 1.5, // 150%
->>>>>>> Stashed changes
+  },
+  smallestParagraph: {
+    fontSize: '11px',
+    fontWeight: '400',
+    lineHeight: 1.5, // 150%
+    marginLeft: '22px',
   },
 };

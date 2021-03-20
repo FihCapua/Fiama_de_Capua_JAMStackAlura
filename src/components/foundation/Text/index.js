@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { propToStyle } from '../../../theme/utils/propToStyle';
+import Link from '../../commons/Link';
 
 export const TextStylesVariantsMap = {
   title: css`
@@ -18,40 +20,81 @@ export const TextStylesVariantsMap = {
         font-weight: ${({ theme }) => theme.typographyVariants.paragraph1.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.paragraph1.lineHeight};
     `,
+  paragraph2: css`
+    font-size: ${({ theme }) => theme.typographyVariants.paragraph2.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.paragraph2.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.paragraph2.lineHeight};
+`,
   subTitle: css`
         font-size: ${({ theme }) => theme.typographyVariants.subTitle.fontSize};
         font-weight: ${({ theme }) => theme.typographyVariants.subTitle.fontWeight};
         line-height: ${({ theme }) => theme.typographyVariants.subTitle.lineHeight};
     `,
+  smallestException: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallestException.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallestException.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallestException.lineHeight};
+`,
+  smallestParagraph: css`
+    font-size: ${({ theme }) => theme.typographyVariants.smallestParagraph.fontSize};
+    font-weight: ${({ theme }) => theme.typographyVariants.smallestParagraph.fontWeight};
+    line-height: ${({ theme }) => theme.typographyVariants.smallestParagraph.lineHeight};
+    margin-left: ${({ theme }) => theme.typographyVariants.smallestParagraph.marginLeft};
+`,
 };
 
 const TextBase = styled.span`
-        ${(props) => TextStylesVariantsMap[props.variant]}
+    ${(props) => TextStylesVariantsMap[props.variant]}
+    ${propToStyle('width')}
+    ${propToStyle('margin')}
+    ${propToStyle('fontSize')}
+    ${propToStyle('textAlign')}
+    ${propToStyle('marginBottom')}
 `;
 
-export default function Text({ tag, variant, children }) {
+export default function Text({
+  tag,
+  variant,
+  children,
+  href,
+  ...props
+}) {
+  if (href) {
+    return (
+      // eslint-disable-next-line react/jsx-filename-extension
+      <TextBase
+        as={Link}
+        href={href}
+        variant={variant}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <TextBase
       as={tag}
       variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
-      {/* por ser um componente de texto, recebe tudo q é passado por parametro */}
       {children}
     </TextBase>
   );
 }
 
 Text.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  tag: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  href: PropTypes.string,
   variant: PropTypes.string,
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 };
 
-// padrões
 Text.defaultProps = {
-  // eslint-disable-next-line react/default-props-match-prop-types
   tag: 'span',
   variant: 'paragraph1',
+  children: null,
+  href: '',
 };
