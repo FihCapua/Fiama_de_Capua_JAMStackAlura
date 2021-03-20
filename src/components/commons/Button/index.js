@@ -37,11 +37,11 @@ const ButtonWrapper = styled.button`
     width: 60%;
   `};
 
-  ${propToStyle('margin')}
   ${propToStyle('width')}
   ${propToStyle('display')}
-  ${propToStyle('fontSize')}
+  ${propToStyle('margin')}
   ${propToStyle('color')}
+  ${propToStyle('fontSize')}
 `;
 
 // eslint-disable-next-line import/prefer-default-export

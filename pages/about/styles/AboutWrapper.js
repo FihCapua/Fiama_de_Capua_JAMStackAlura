@@ -48,9 +48,9 @@ AboutWrapper.Image = styled.img`
 
     ${breakPointsMedia({
     md: css`
+            margin: 40px 15px;
             width: 250px;
             height: 250px;
-            margin: 40px 15px;
         `,
   })}
 `;
