@@ -257,8 +257,4 @@ export default function FormCadastro({ propsDoModal }) {
       </Grid.Col>
     </Grid.Row>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 5bfd82aac93813612345fa20ccb45874a6ff6505
