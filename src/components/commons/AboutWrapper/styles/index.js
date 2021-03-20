@@ -1,8 +1,8 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
-import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
+import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 
 export const AboutWrapper = styled.div`
     display: flex;
