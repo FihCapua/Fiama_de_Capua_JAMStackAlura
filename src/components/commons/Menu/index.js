@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import NextLink from 'next/link';
 import { NavBar } from './styles/NavBar';
 import { Logo } from '../../../theme/Logo/Logo';
 import Text from '../../foundation/Text';
@@ -8,7 +9,7 @@ export default function Menu() {
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/about',
+      url: '/about/about',
     },
     {
       texto: 'Projetos',
@@ -30,9 +31,11 @@ export default function Menu() {
         {links.map((link) => (
           <ul key="1">
             <li key={link.url}>
-              <Text tag="a" variant="paragraph1" href={link.url}>
-                {link.texto}
-              </Text>
+              <NextLink href={link.url}>
+                <Text tag="a" variant="paragraph1" href={link.url}>
+                  {link.texto}
+                </Text>
+              </NextLink>
             </li>
           </ul>
         ))}

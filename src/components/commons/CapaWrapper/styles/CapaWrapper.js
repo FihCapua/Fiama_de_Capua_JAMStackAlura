@@ -5,7 +5,7 @@ import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
 
 export const CapaWrapper = styled.div`
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;

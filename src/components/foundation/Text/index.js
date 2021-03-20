@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
+import { propToStyle } from '../../../theme/utils/propToStyle';
+import Link from '../../commons/Link';
 
 export const TextStylesVariantsMap = {
   title: css`
@@ -42,37 +44,57 @@ export const TextStylesVariantsMap = {
 };
 
 const TextBase = styled.span`
-        ${(props) => TextStylesVariantsMap[props.variant]}
+    ${(props) => TextStylesVariantsMap[props.variant]}
+    ${propToStyle('width')}
+    ${propToStyle('margin')}
+    ${propToStyle('fontSize')}
+    ${propToStyle('textAlign')}
+    ${propToStyle('marginBottom')}
 `;
 
 export default function Text({
   tag,
   variant,
   children,
+  href,
+  ...props
 }) {
+  if (href) {
+    return (
+      // eslint-disable-next-line react/jsx-filename-extension
+      <TextBase
+        as={Link}
+        href={href}
+        variant={variant}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...props}
+      >
+        {children}
+      </TextBase>
+    );
+  }
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <TextBase
       as={tag}
       variant={variant}
+      // eslint-disable-next-line react/jsx-props-no-spreading
+      {...props}
     >
-      {/* por ser um componente de texto, recebe tudo q é passado por parametro */}
       {children}
     </TextBase>
   );
 }
 
 Text.propTypes = {
-  // eslint-disable-next-line react/require-default-props
-  tag: PropTypes.string.isRequired,
+  tag: PropTypes.string,
+  href: PropTypes.string,
   variant: PropTypes.string,
   children: PropTypes.node,
 };
 
-// padrões
 Text.defaultProps = {
-  // eslint-disable-next-line react/default-props-match-prop-types
   tag: 'span',
   variant: 'paragraph1',
   children: null,
+  href: '',
 };
