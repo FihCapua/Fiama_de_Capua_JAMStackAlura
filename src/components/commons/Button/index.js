@@ -2,9 +2,9 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
-import { propToStyle } from '../../../theme/utils/propToStyle';
-import { TextStylesVariantsMap } from '../../foundation/Text/index';
 import Link from '../Link';
+import { TextStylesVariantsMap } from '../../foundation/Text/index';
+import { propToStyle } from '../../../theme/utils/propToStyle';
 
 // eslint-disable-next-line import/prefer-default-export
 const ButtonWrapper = styled.button`
