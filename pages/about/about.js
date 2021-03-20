@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React from 'react';
-import { AboutWrapper } from './styles/AboutWrapper';
+import { AboutWrapper } from '../../src/components/commons/AboutWrapper/styles';
 
 export default function About() {
   return (

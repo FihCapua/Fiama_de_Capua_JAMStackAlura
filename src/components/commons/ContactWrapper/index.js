@@ -1,14 +1,13 @@
+/* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import { ContactWrapper } from './styles/ContactWrapper';
 import Modal from '../Modal';
-import FormCadastro from '../../patterns/FormCadastro';
 import { Button } from '../Button';
-// eslint-disable-next-line import/no-cycle
+import FormCadastro from '../../patterns/FormCadastro';
 
 export default function Contact() {
   const [isModalOpen, setModalState] = React.useState(false);
   return (
-    // eslint-disable-next-line react/jsx-filename-extension
     <ContactWrapper>
       <ContactWrapper.Title>
         Vamos bater um papo?
