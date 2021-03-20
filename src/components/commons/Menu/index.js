@@ -2,8 +2,8 @@
 import React from 'react';
 import NextLink from 'next/link';
 import { NavBar } from './styles/NavBar';
-import { Logo } from '../../../theme/Logo/Logo';
 import Text from '../../foundation/Text';
+import { Logo } from '../../../theme/Logo/Logo';
 
 export default function Menu() {
   const links = [
