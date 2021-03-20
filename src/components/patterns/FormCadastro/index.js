@@ -62,6 +62,31 @@ function FormContent() {
           message: userInfo.message,
         };
 
+        // eslint-disable-next-line no-unused-expressions
+        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(userDTO),
+        })
+          .then((respostaDoServidor) => {
+            if (respostaDoServidor.ok) {
+              respostaDoServidor.json();
+            }
+            throw new Error('Não foi possível cadastrar o usuário');
+          })
+          .then(() => {
+            setSubmissionStatus(formStates.DONE);
+            // eslint-disable-next-line no-console
+            console.log(respostaConvertidaEmObjeto);
+          })
+          .catch((error) => {
+            setSubmissionStatus(formStates.ERROR);
+            // eslint-disable-next-line no-console
+            console.log(error);
+          });
+
         setSubmissionStatus(formStates.LOADING);
         setTimeout(() => {
           // eslint-disable-next-line no-unused-expressions
@@ -110,15 +135,15 @@ function FormContent() {
           value={userInfo.email}
           onChange={handleChange}
         />
-        { emailIsInvalid() && (
-        <Text
-          variant="smallestParagraph"
-          tag="p"
-          color="primary.main.contrastText"
-        >
-          Por favor, insira um e-mail válido
-        </Text>
-        ) }
+        {emailIsInvalid() && (
+          <Text
+            variant="smallestParagraph"
+            tag="p"
+            color="primary.main.contrastText"
+          >
+            Por favor, insira um e-mail válido
+          </Text>
+        )}
       </div>
       <div>
         <TextArea
@@ -173,19 +198,19 @@ function FormContent() {
       )}
 
       {isFormSubmited && submissionStatus === formStates.ERROR && (
-      <Box
-        display="flex"
-        justifyContent="center"
-        margin="15px 0"
-      >
-        <Lottie
-          width="50px"
-          height="50px"
-          className="lottie-container basic"
-          config={{ animationData: errorAnimation, loop: false, autoplay: true }}
-        />
-        <p>Erro no envio dos dados</p>
-      </Box>
+        <Box
+          display="flex"
+          justifyContent="center"
+          margin="15px 0"
+        >
+          <Lottie
+            width="50px"
+            height="50px"
+            className="lottie-container basic"
+            config={{ animationData: errorAnimation, loop: false, autoplay: true }}
+          />
+          <p>Erro no envio dos dados</p>
+        </Box>
       )}
 
     </form>
