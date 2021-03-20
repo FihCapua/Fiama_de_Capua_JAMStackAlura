@@ -78,3 +78,5 @@ AboutWrapper.Text = styled.p`
         `,
   })}
 `;
+
+export default AboutWrapper();
