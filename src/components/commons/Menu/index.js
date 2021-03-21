@@ -1,3 +1,4 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import NextLink from 'next/link';
@@ -28,17 +29,21 @@ export default function Menu() {
       </NavBar.LeftSide>
       <NavBar.RightSide>
         {/* Percorrendo os links com map */}
-        {links.map((link) => (
-          <ul key="1">
-            <li key={link.url}>
-              <NextLink href={link.url}>
-                <Text tag="a" variant="paragraph1" href={link.url}>
-                  {link.texto}
-                </Text>
-              </NextLink>
-            </li>
-          </ul>
-        ))}
+        {links.map((link, index) => {
+          const key = link.texto + index;
+
+          return (
+            <ul key={key}>
+              <li key={link.url}>
+                <NextLink href={link.url}>
+                  <Text tag="a" variant="paragraph1" href={link.url}>
+                    {link.texto}
+                  </Text>
+                </NextLink>
+              </li>
+            </ul>
+          );
+        })}
       </NavBar.RightSide>
     </NavBar>
   );
