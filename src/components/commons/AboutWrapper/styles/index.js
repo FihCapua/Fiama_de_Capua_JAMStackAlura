@@ -78,3 +78,37 @@ AboutWrapper.Text = styled.p`
         `,
   })}
 `;
+
+AboutWrapper.Repo = styled.div`
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 80px;
+    color: ${function (props) {
+    return props.theme.colors.secondary.main.color;
+  }};
+`;
+
+AboutWrapper.RepoDetails = styled.ul`
+  width: 100%;
+  margin: 15px 0;
+`;
+
+AboutWrapper.RepoText = styled.li`
+  list-style: none;
+  list-style-type: none;
+  color: ${function (props) {
+    return props.theme.colors.primary.main.contrastText;
+  }};
+`;
+
+AboutWrapper.RepoLink = styled.li`
+  text-decoration: none;
+  color: ${function (props) {
+    return props.theme.colors.secondary.main.color;
+  }};
+    ${TextStylesVariantsMap.paragraph1}
+  list-style: none;
+  list-style-type: none;
+`;

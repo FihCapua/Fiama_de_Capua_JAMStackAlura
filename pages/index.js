@@ -20,7 +20,6 @@ export default function Home() {
       <BackgroundWrapper>
         <Capa />
         <NavBar />
-        {/* <About /> */}
         <Portfolio />
         <Contact />
         <Footer />
