@@ -6,6 +6,7 @@ import NavBar from '../src/components/commons/Menu';
 import Portfolio from '../src/components/commons/ProjectsWrapper';
 import Contact from '../src/components/commons/ContactWrapper';
 import Footer from '../src/components/commons/Footer';
+// import About from './about/about';
 
 export default function Home() {
   return (

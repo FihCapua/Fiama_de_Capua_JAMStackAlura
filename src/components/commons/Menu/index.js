@@ -2,9 +2,9 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
 import NextLink from 'next/link';
+import Text from '../../foundation/Text';
 import { NavBar } from './styles/NavBar';
 import { Logo } from '../../../theme/Logo/Logo';
-import Text from '../../foundation/Text';
 
 export default function Menu() {
   const links = [

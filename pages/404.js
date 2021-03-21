@@ -34,7 +34,7 @@ export default function Page404() {
         width="100%"
         textAlign="center"
       >
-        Ooops<br />
+        Ops<br />
         Não há ninguém aqui além dos construtores. <br />
         Volte mais tarde!
       </Text>

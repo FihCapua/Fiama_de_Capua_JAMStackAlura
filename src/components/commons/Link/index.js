@@ -1,8 +1,8 @@
 /* eslint-disable func-names */
 import React from 'react';
 import styled from 'styled-components';
-import NextLink from 'next/link';
 import PropTypes from 'prop-types';
+import NextLink from 'next/link';
 
 const StyledLink = styled.a`
   text-decoration: none;
