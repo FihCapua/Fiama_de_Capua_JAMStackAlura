@@ -39,13 +39,13 @@ export default function AboutScreen({ repositories }) {
               <AboutWrapper.Title>
                 Meus Repositórios
               </AboutWrapper.Title>
-              {repositories.map((repository, element) => {
+              {repositories.map((repository, index) => {
                 return (
                   <>
                     <AboutWrapper.RepoDetails>
-                      <AboutWrapper.RepoText key={element}>{repository.name}</AboutWrapper.RepoText>
+                      <AboutWrapper.RepoText key={index}>{repository.name}</AboutWrapper.RepoText>
                       <a target="_blank" rel="noreferrer" href={repository.html_url}>
-                        <AboutWrapper.RepoLink key={element}>{repository.full_name}</AboutWrapper.RepoLink>
+                        <AboutWrapper.RepoLink key={index}>{repository.full_name}</AboutWrapper.RepoLink>
                       </a>
                     </AboutWrapper.RepoDetails>
                   </>

@@ -1,28 +1,50 @@
+/* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-filename-extension */
-/* eslint-disable react/react-in-jsx-scope */
-import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
-import Capa from '../src/components/commons/CapaWrapper';
-import NavBar from '../src/components/commons/Cabecalho';
-import About from '../src/components/commons/AboutWrapper';
-import Portfolio from '../src/components/commons/ProjectsWrapper';
-import Footer from '../src/components/commons/Footer';
+import React from 'react';
+import NextLink from 'next/link';
+import Text from '../../foundation/Text';
+import { NavBar } from './styles/NavBar';
+import { Logo } from '../../../theme/Logo/Logo';
 
-export default function Home() {
+export default function Menu() {
+  const links = [
+    {
+      texto: 'Sobre Mim',
+      url: '/about/about',
+    },
+    {
+      texto: 'Projetos',
+      url: '/projects/projects',
+    },
+    {
+      texto: 'Contato',
+      url: '/contact',
+    },
+  ];
+
   return (
-    <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    }}
-    >
-      <BackgroundWrapper>
-        <Capa />
-        <NavBar />
-        <About />
-        <Portfolio />
-        <Footer />
-      </BackgroundWrapper>
-    </div>
+    <NavBar>
+      <NavBar.LeftSide>
+        <Logo />
+      </NavBar.LeftSide>
+      <NavBar.RightSide>
+        {/* Percorrendo os links com map */}
+        {links.map((link, index) => {
+          const key = link.texto + index;
+
+          return (
+            <ul key={key}>
+              <li key={link.url}>
+                <NextLink href={link.url}>
+                  <Text tag="a" variant="paragraph1" href={link.url}>
+                    {link.texto}
+                  </Text>
+                </NextLink>
+              </li>
+            </ul>
+          );
+        })}
+      </NavBar.RightSide>
+    </NavBar>
   );
 }

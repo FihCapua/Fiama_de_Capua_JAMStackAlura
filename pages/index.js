@@ -2,7 +2,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
 import Capa from '../src/components/commons/CapaWrapper';
-import NavBar from '../src/components/commons/Menu';
+import Menu from '../src/components/commons/Menu';
 import Portfolio from '../src/components/commons/ProjectsWrapper';
 import Contact from '../src/components/commons/ContactWrapper';
 import Footer from '../src/components/commons/Footer';
@@ -19,7 +19,7 @@ export default function Home() {
     >
       <BackgroundWrapper>
         <Capa />
-        <NavBar />
+        <Menu />
         <Portfolio />
         <Contact />
         <Footer />

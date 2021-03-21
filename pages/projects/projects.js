@@ -1,10 +1,10 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import SEO from '../../src/components/SEO';
+import SEO from '../../src/components/commons/SEO';
 import db from '../../db.json';
+import ProjectsScreen from '../../src/components/screen/ProjectsScreen';
 import Menu from '../../src/components/commons/Menu';
 import Footer from '../../src/components/commons/Footer';
-import ProjectsScreen from '../../src/components/commons/ProjectsWrapper';
 
 export default function Projects() {
   return (
