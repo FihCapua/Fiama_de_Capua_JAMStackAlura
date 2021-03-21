@@ -1,0 +1,34 @@
+{
+    "projects": [
+      {
+        "image": "/img/legolas.jpg",
+        "title": "Legolas",
+        "description": "They're taking the hobbits to Isengard",
+        "link": "http://pudim.com.br/"
+      },
+      {
+        "image": "/img/allyourbase.jpg",
+        "title": "CATS",
+        "description": "All Your Base Are Belong To Us",
+        "link": "http://pudim.com.br/"
+      },
+      {
+        "image": "/img/internet.jpg",
+        "title": "Internet",
+        "description": "Welcome to the internet, I'll be your guide",
+        "link": "http://pudim.com.br/"
+      },
+      {
+        "image": "/img/otaco.jpg",
+        "title": "Otaco",
+        "description": "Corre que o otaco tá puto",
+        "link": "http://pudim.com.br/"
+      },
+      {
+        "image": "/img/tankcat.jpg",
+        "title": "Boromir",
+        "description": "One does not simply Tankcat into Mordor",
+        "link": "http://pudim.com.br/"
+      }
+    ]
+  }
