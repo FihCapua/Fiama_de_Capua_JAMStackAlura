@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React, { useState, useEffect } from 'react';
+import SEO from '../../src/components/SEO';
 import AboutScreen from '../../src/components/screen/AboutScreen';
 
 export default function About() {
@@ -19,6 +20,7 @@ export default function About() {
 
   return (
     <>
+      <SEO headTitle="Sobre Mim" />
       {userRepositories && <AboutScreen repositories={userRepositories} />}
     </>
   );
