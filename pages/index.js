@@ -1,29 +1,24 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/react-in-jsx-scope */
-import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
 import Capa from '../src/components/commons/CapaWrapper';
-import NavBar from '../src/components/commons/Menu';
 import Portfolio from '../src/components/commons/ProjectsWrapper';
 import Contact from '../src/components/commons/ContactWrapper';
-import Footer from '../src/components/commons/Footer';
+import WebsitePageWrapper from '../src/components/wrappers/WebsitePage';
 // import About from './about/about';
 
 export default function Home() {
   return (
-    <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    }}
+    <WebsitePageWrapper
+      seoProps={{
+        headTitle: 'Home',
+      }}
+      menuProps={{
+        display: true,
+      }}
     >
-      <BackgroundWrapper>
-        <Capa />
-        <NavBar />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </BackgroundWrapper>
-    </div>
+      <Capa />
+      <Portfolio />
+      <Contact />
+    </WebsitePageWrapper>
   );
 }
