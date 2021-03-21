@@ -6,11 +6,11 @@ import NavBar from '../src/components/commons/Menu';
 import Portfolio from '../src/components/commons/ProjectsWrapper';
 import Contact from '../src/components/commons/ContactWrapper';
 import Footer from '../src/components/commons/Footer';
-// import About from './about/about';
+import WebsitePageWrapper from '../src/components/wrappers/WebsitePage';
 
 export default function Home() {
   return (
-    <div style={{
+    <WebsitePageWrapper style={{
       display: 'flex',
       flexWrap: 'wrap',
       flexDirection: 'column',
@@ -24,6 +24,6 @@ export default function Home() {
         <Contact />
         <Footer />
       </BackgroundWrapper>
-    </div>
+    </WebsitePageWrapper>
   );
 }
