@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
+import NextLink from 'next/link';
 import { Lottie } from '@crello/react-lottie';
 import constructAnimation from './animation/page-construction.json';
 import { Box } from '../src/components/foundation/Layout/Box';
@@ -37,13 +38,15 @@ export default function Page404() {
         Não há ninguém aqui além dos construtores. <br />
         Volte mais tarde!
       </Text>
-      <Button
-        width="100px"
-        margin="-15px 0 10px 0"
-        color="#ffffff"
-      >
-        Voltar
-      </Button>
+      <NextLink href="/">
+        <Button
+          width="100px"
+          margin="-15px 0 10px 0"
+          color="#ffffff"
+        >
+          Voltar
+        </Button>
+      </NextLink>
     </Box>
   );
 }
