@@ -7,6 +7,7 @@ const Container = styled.div`
     width: 100%;
     padding-right: 28px;
     padding-left: 28px;
+    margin-top: 5px;
     margin-right: auto;
     margin-left: auto;
     max-width: initial;
@@ -37,9 +38,12 @@ export const Grid = {
       flex-wrap: wrap;
       
       ${propToStyle('flex')}
+      ${propToStyle('justifyContent')}
+      ${propToStyle('flexDirection')}
       ${propToStyle('marginLeft')}
       ${propToStyle('MarginRight')}
-      ${propToStyle('justifyContent')}
+      ${propToStyle('MarginTop')}
+      ${propToStyle('MarginBottom')}
     `,
   Col: styled.div`
       height: 400px;
@@ -138,6 +142,7 @@ export const Grid = {
   }}
       
       ${propToStyle('display')}
+      ${propToStyle('order')}
       ${propToStyle('alignItems')}
       ${propToStyle('justifyContent')}
       ${propToStyle('flexDirection')}
