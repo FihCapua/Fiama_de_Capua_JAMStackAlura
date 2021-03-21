@@ -13,6 +13,7 @@ export const NavBar = styled.nav`
     return props.theme.colors.tertiary.light.color;
   }};
   padding: 0px 10px;
+  ${TextStylesVariantsMap.paragraph1};
 
   ${breakPointsMedia({
     xs: css`
@@ -23,11 +24,9 @@ export const NavBar = styled.nav`
           justify-content: space-between;
         `,
     lg: css`
-        justify-content: inherit;
+        justify-content: space-between;
         `,
   })}
-
-  ${TextStylesVariantsMap.paragraph1};
 `;
 
 NavBar.LeftSide = styled.div`
@@ -36,13 +35,14 @@ NavBar.LeftSide = styled.div`
   ${breakPointsMedia({
     xs: css`
           width: 95%;
+          margin: 33px 0;
         `,
     md: css`
           margin-left: 30px;
         `,
     lg: css`
           width: 65%;
-          margin: -9px 170px;
+          margin: -9px 120px;
         `,
     xl: css`
           margin: -9px 170px;
@@ -58,30 +58,31 @@ NavBar.RightSide = styled.div`
     li { 
       cursor: pointer;
     }
-    a {
-      color: ${function (props) {
-    return props.theme.colors.tertiary.light.contrastText;
-  }};
-      text-decoration: none;
-      transition: ${({ theme }) => theme.transition};
-      &:hover,
-      &:focus {
-        color: ${function (props) {
-    return props.theme.colors.secondary.main.contrastText;
-  }}
-      }
-    }
-
     ${breakPointsMedia({
     xs: css`
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 20px;
+          ul {
+            width: 150px;
+          }
+    `,
+    sm: css`
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 15px;
           ul {
             width: 130px;
           }
         `,
     md: css`
-          margin: 0 10px;
+          display: flex;
+          flex-wrap: wrap;
+          margin: 0 50px;
         `,
     lg: css`
+            display: flex;
+            flex-wrap: nowrap;
             margin: 0 100px;
         `,
   })}

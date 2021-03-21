@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
 import styled, { css } from 'styled-components';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
@@ -14,7 +15,7 @@ export const AboutWrapper = styled.div`
     padding-bottom: 50px;
 `;
 
-AboutWrapper.Title = styled.div`
+AboutWrapper.Title = styled.h2`
     width: 100%;
     text-align: center;
     color: ${function (props) {
@@ -47,9 +48,9 @@ AboutWrapper.Image = styled.img`
 
     ${breakPointsMedia({
     md: css`
+            margin: 40px 15px;
             width: 250px;
             height: 250px;
-            margin: 40px 15px;
         `,
   })}
 `;
@@ -76,4 +77,38 @@ AboutWrapper.Text = styled.p`
             width: 30%;
         `,
   })}
+`;
+
+AboutWrapper.Repo = styled.div`
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 80px;
+    color: ${function (props) {
+    return props.theme.colors.secondary.main.color;
+  }};
+`;
+
+AboutWrapper.RepoDetails = styled.ul`
+  width: 100%;
+  margin: 15px 0;
+`;
+
+AboutWrapper.RepoText = styled.li`
+  list-style: none;
+  list-style-type: none;
+  color: ${function (props) {
+    return props.theme.colors.primary.main.contrastText;
+  }};
+`;
+
+AboutWrapper.RepoLink = styled.li`
+  text-decoration: none;
+  color: ${function (props) {
+    return props.theme.colors.secondary.main.color;
+  }};
+    ${TextStylesVariantsMap.paragraph1}
+  list-style: none;
+  list-style-type: none;
 `;
