@@ -62,7 +62,7 @@ NavBar.RightSide = styled.div`
     xs: css`
           display: flex;
           flex-wrap: wrap;
-          margin: 0 20px;
+          margin: 0;
           ul {
             width: 150px;
           }

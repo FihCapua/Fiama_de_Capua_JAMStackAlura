@@ -43,6 +43,11 @@ const colors = {
       contrastText: '#e1a7f9',
     },
   },
+  fourth: {
+    main: {
+      contrastText: '#4d4d4d',
+    },
+  },
   modes: {
     light: {},
   },

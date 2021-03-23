@@ -20,6 +20,10 @@ export default function SEO({ headTitle }) {
       <meta name="title" content={title} />
       <meta name="description" content={description} />
 
+      {/* Global Fonts */}
+      <link rel="preconnect" href="https://fonts.gstatic.com" />
+      <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={urlBase} />

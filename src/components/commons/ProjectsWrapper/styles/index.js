@@ -5,13 +5,18 @@ import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
 
 export const ProjectsWrapper = styled.div`
+    margin-top: -32px;
+    background-color: ${function (props) {
+    return props.theme.colors.background.dark.color;
+  }};
+    padding-bottom: 90px;
+`;
+
+ProjectsWrapper.Section = styled.div`
     display: flex;
     justify-content: center; 
     flex-wrap: wrap;
-    margin: -5px 0;
-    background-color: ${function (props) {
-    return props.theme.colors.primary.main.color;
-  }};  
+    margin: 30px 0;
     padding-bottom: 50px;
 `;
 
@@ -53,6 +58,27 @@ ProjectsWrapper.Image = styled.img`
             height: 250px;
         `,
   })}
+`;
+
+ProjectsWrapper.ImgSlug = styled.img`
+    margin-top: 50px;
+    margin-bottom: -50px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+`;
+
+ProjectsWrapper.TextSlug = styled.div`
+  width: 100%;
+`;
+
+ProjectsWrapper.SubSlug = styled.h3`
+    font-size: 14px;
+    color: ${function (props) {
+    return props.theme.colors.primary.main.contrastText;
+  }};
+    ${TextStylesVariantsMap.subTitle}
+    padding: 35px 0;
 `;
 
 ProjectsWrapper.Text = styled.p`
