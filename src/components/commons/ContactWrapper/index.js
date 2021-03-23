@@ -1,12 +1,13 @@
 import React from 'react';
 import { ContactWrapper } from './styles/ContactWrapper';
-import Modal from '../Modal';
-import FormCadastro from '../../patterns/FormCadastro';
 import { Button } from '../Button';
+import { WebsitePageContext } from '../../wrappers/WebsitePage';
+
 // eslint-disable-next-line import/no-cycle
 
 export default function Contact() {
-  const [isModalOpen, setModalState] = React.useState(false);
+  const websitePageContext = React.useContext(WebsitePageContext);
+
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <ContactWrapper>
@@ -20,21 +21,8 @@ export default function Contact() {
         Bora lá!
       </ContactWrapper.Text>
 
-      <Modal
-        isOpen={isModalOpen}
-        onClose={() => {
-          setModalState(false);
-        }}
-      >
-        {(propsDoModal) => (
-          <FormCadastro propsDoModal={propsDoModal} />
-        )}
-      </Modal>
-
       <Button
-        onClick={() => {
-          setModalState(!isModalOpen);
-        }}
+        onClick={() => websitePageContext.toggleRegisterModal()}
       >
         Clique Aqui!
       </Button>

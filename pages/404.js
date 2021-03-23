@@ -6,19 +6,20 @@ import constructAnimation from './animation/page-construction.json';
 import { Box } from '../src/components/foundation/Layout/Box';
 import Text from '../src/components/foundation/Text';
 import { Button } from '../src/components/commons/Button';
+import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
-export default function Page404() {
+function Page404() {
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <Box
       display="flex"
       justifyContent="center"
       flexWrap="wrap"
-      margin="-110px 0"
+      backgroundColor="#140f3c"
     >
       <Lottie
         width="800px"
-        height="550px"
+        height="500px"
         display="flex"
         justifyContent="center"
         className="lottie-container basic"
@@ -29,10 +30,10 @@ export default function Page404() {
         variant="title"
         tag="h1"
         fontSize="25px"
-        color="tertiary.light"
-        margin="35px 0"
+        margin="0 0 35px 0"
         width="100%"
         textAlign="center"
+        color="#ffffff"
       >
         Ops<br />
         Não há ninguém aqui além dos construtores. <br />
@@ -41,7 +42,7 @@ export default function Page404() {
       <NextLink href="/">
         <Button
           width="100px"
-          margin="-15px 0 10px 0"
+          margin="-15px 0 25px 0"
           color="#ffffff"
         >
           Voltar
@@ -50,3 +51,11 @@ export default function Page404() {
     </Box>
   );
 }
+
+export default websitePageHOC(Page404, {
+  pageWrapperPops: {
+    seoProps: {
+      headTitle: 'Erro',
+    },
+  },
+});

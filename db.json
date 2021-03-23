@@ -1,0 +1,36 @@
+{
+    "projects": [
+      {
+        "id": "#1",
+        "image": "https://fihcapua.github.io/portfolio/imgs/loja-fone.jpg",
+        "title": "Loja de Fones",
+        "description": "Projeto criado na aula de Front End da Collab Code com HTML, CSS e JS",
+        "link": "https://github.com/FihCapua/loja-de-fones",
+        "slug": "loja-de-fones"
+      },
+      {
+        "id": "#2",
+        "image": "https://fihcapua.github.io/portfolio/imgs/casa-criativa.jpg",
+        "title": "Casa Criativa",
+        "description": "Projeto com criação de páginas em HTML e CSS e JS e gerenciamento de dados em Node.js",
+        "link": "https://github.com/FihCapua/projeto-casa-criativa",
+        "slug": "projeto-casa-criativa"
+      },
+      {
+        "id": "#3",
+        "image": "https://fihcapua.github.io/portfolio/imgs/flappy-bird.jpg",
+        "title": "Flappy Bird",
+        "description": "Jogo do passarinho feito com base nas aulas do canal do DevSoutinho desenvolvido em JS",
+        "link": "https://github.com/FihCapua/flappy-bird",
+        "slug": "flappy-bird"
+      },
+      {
+        "id": "#4",
+        "image": "https://fihcapua.github.io/portfolio/imgs/batuquequiz.png",
+        "title": "BatuqueQuiz",
+        "description": "Projeto criado durante a Segunda Imersão Alura de - React, Styled Components e Next.JS",
+        "link": "https://github.com/FihCapua/batuque-quiz",
+        "slug": "batuque-quiz"
+      }
+    ]
+  }

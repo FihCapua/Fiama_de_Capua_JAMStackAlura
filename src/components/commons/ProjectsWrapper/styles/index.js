@@ -4,18 +4,23 @@ import styled, { css } from 'styled-components';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text';
 
-export const AboutWrapper = styled.div`
+export const ProjectsWrapper = styled.div`
+    margin-top: -32px;
+    background-color: ${function (props) {
+    return props.theme.colors.background.dark.color;
+  }};
+    padding-bottom: 90px;
+`;
+
+ProjectsWrapper.Section = styled.div`
     display: flex;
     justify-content: center; 
     flex-wrap: wrap;
-    margin: -5px 0;
-    background-color: ${function (props) {
-    return props.theme.colors.primary.main.color;
-  }};  
+    margin: 30px 0;
     padding-bottom: 50px;
 `;
 
-AboutWrapper.Title = styled.h2`
+ProjectsWrapper.Title = styled.h2`
     width: 100%;
     text-align: center;
     color: ${function (props) {
@@ -25,7 +30,7 @@ AboutWrapper.Title = styled.h2`
     padding: 35px 0;
 `;
 
-AboutWrapper.Content = styled.div`
+ProjectsWrapper.Content = styled.div`
     display: flex;
     justify-content: center;
 
@@ -39,10 +44,10 @@ AboutWrapper.Content = styled.div`
   })}
 `;
 
-AboutWrapper.Image = styled.img`
+ProjectsWrapper.Image = styled.img`
     background: url(https://mir-s3-cdn-cf.behance.net/user/276/d2ff2d30408991.56edd9abea663.jpg) center center / cover rgb(28, 24, 20);
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     box-shadow: ${({ theme }) => theme.boxShadow};
 
@@ -55,21 +60,40 @@ AboutWrapper.Image = styled.img`
   })}
 `;
 
-AboutWrapper.Text = styled.p`
+ProjectsWrapper.ImgSlug = styled.img`
+    margin-top: 50px;
+    margin-bottom: -50px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+`;
+
+ProjectsWrapper.TextSlug = styled.div`
+  width: 100%;
+`;
+
+ProjectsWrapper.SubSlug = styled.h3`
+    font-size: 14px;
+    color: ${function (props) {
+    return props.theme.colors.primary.main.contrastText;
+  }};
+    ${TextStylesVariantsMap.subTitle}
+    padding: 35px 0;
+`;
+
+ProjectsWrapper.Text = styled.p`
     color: ${function (props) {
     return props.theme.colors.secondary.main.color;
   }};
     ${TextStylesVariantsMap.paragraph1}
     text-align: justify;
-    margin: 30px;
+    margin: 60px 60px;
 
     ${breakPointsMedia({
     xs: css`
-            text-align: center;
-            width: 90%;
+            width: 65%;
         `,
     md: css`
-    text-align: justify;
             width: 50%;
         `,
     lg: css`
@@ -81,7 +105,7 @@ AboutWrapper.Text = styled.p`
   })}
 `;
 
-AboutWrapper.Repo = styled.div`
+ProjectsWrapper.Repo = styled.div`
     width: 50%;
     display: flex;
     flex-wrap: wrap;
@@ -90,47 +114,14 @@ AboutWrapper.Repo = styled.div`
     color: ${function (props) {
     return props.theme.colors.secondary.main.color;
   }};
-  ${breakPointsMedia({
-    xs: css`
-            text-align: center;
-            width: 130%;
-        `,
-    md: css`
-            text-align: justify;
-            width: 80%;
-        `,
-    lg: css`
-            width: 90%;
-        `,
-    xl: css`
-            width: 100%;
-        `,
-  })}
 `;
 
-AboutWrapper.RepoDetails = styled.ul`
+ProjectsWrapper.RepoDetails = styled.ul`
   width: 100%;
   margin: 15px 0;
-  ${breakPointsMedia({
-    xs: css`
-            text-align: center;
-            width: 200%;
-            margin-left: -30px;
-        `,
-    md: css`
-            text-align: center;
-            width: 80%;
-        `,
-    lg: css`
-            width: 90%;
-        `,
-    xl: css`
-            width: 100%;
-        `,
-  })}
 `;
 
-AboutWrapper.RepoText = styled.li`
+ProjectsWrapper.RepoText = styled.li`
   list-style: none;
   list-style-type: none;
   color: ${function (props) {
@@ -138,7 +129,7 @@ AboutWrapper.RepoText = styled.li`
   }};
 `;
 
-AboutWrapper.RepoLink = styled.li`
+ProjectsWrapper.RepoLink = styled.li`
   text-decoration: none;
   color: ${function (props) {
     return props.theme.colors.secondary.main.color;
@@ -146,22 +137,4 @@ AboutWrapper.RepoLink = styled.li`
     ${TextStylesVariantsMap.paragraph1}
   list-style: none;
   list-style-type: none;
-  ${breakPointsMedia({
-    xs: css`
-            font-size: 12px;
-        `,
-    md: css`
-            text-align: center;
-            width: 80%;
-            margin-left: 30px;
-        `,
-    lg: css`
-            width: 45%;
-            margin-left: 180px;
-        `,
-    xl: css`
-            width: 50%;
-            margin-left: 250px;
-        `,
-  })}
 `;

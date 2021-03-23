@@ -7,7 +7,7 @@ import { breakPointsMedia } from '../../../../../theme/utils/breakpointsMedia';
 export const Card = styled.div`
     display: grid;
     width: 100%;
-    grid-template-columns: 70%;
+    grid-template-columns: 75%;
     justify-content: center;
     margin: 40px 0 100px 0;   
 
@@ -32,13 +32,13 @@ export const Card = styled.div`
         `,
     xl: css`
             width: 100%;
-            grid-template-columns: 70%;
+            grid-template-columns: 75%;
             margin: 40px 0 150px 0;
     `,
   })} 
 `;
 
-Card.Left = styled.div`
+Card.left = styled.div`
     float: left;
     width: 400px;
     height: 200px;
@@ -71,7 +71,7 @@ Card.Left = styled.div`
   })} 
 `;
 
-Card.Right = styled.div`
+Card.right = styled.div`
     float: right;
     width: 400px;
     height: 200px;
@@ -126,7 +126,7 @@ Card.CardImage = styled.img`
         `,
     xl: css`
             width:400px;
-            height: 350px;
+            height: 300px;
     `,
   })} 
 `;

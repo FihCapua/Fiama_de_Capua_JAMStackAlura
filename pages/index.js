@@ -1,29 +1,22 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable react/react-in-jsx-scope */
-import { BackgroundWrapper } from '../src/components/commons/BackgroundWrapper/style/BackgroundWrapper';
 import Capa from '../src/components/commons/CapaWrapper';
-import NavBar from '../src/components/commons/Menu';
-import Portfolio from '../src/components/commons/ProjectsWrapper';
-import Contact from '../src/components/commons/ContactWrapper';
-import Footer from '../src/components/commons/Footer';
-// import About from './about/about';
+import SEO from '../src/components/commons/SEO';
+import websitePageHOC from '../src/components/wrappers/WebsitePage/hoc';
 
-export default function Home() {
+function HomeScreen() {
   return (
-    <div style={{
-      display: 'flex',
-      flexWrap: 'wrap',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-    }}
-    >
-      <BackgroundWrapper>
-        <Capa />
-        <NavBar />
-        <Portfolio />
-        <Contact />
-        <Footer />
-      </BackgroundWrapper>
-    </div>
+    <>
+      <SEO headTitle="Home" />
+      <Capa />
+    </>
   );
 }
+
+export default websitePageHOC(HomeScreen, {
+  pageWrapperPops: {
+    seoProps: {
+      headTitle: 'Home',
+    },
+  },
+});
