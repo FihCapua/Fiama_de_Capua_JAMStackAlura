@@ -3,21 +3,14 @@
 /* eslint-disable max-len */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import styled from 'styled-components';
-import Image from 'next/image';
 import PropTypes from 'prop-types';
-import { BackgroundWrapper } from '../../commons/BackgroundWrapper/style/BackgroundWrapper';
 import { Box } from '../../foundation/Layout/Box';
 import { Grid } from '../../foundation/Layout/Grid';
-import { ProjectsWrapper } from '../../commons/ProjectsWrapper/styles/ProjectsWrapper';
-import Text from '../../foundation/Text';
+import { ProjectsWrapper } from '../../commons/ProjectsWrapper/styles';
+import SectionTitle from '../../commons/ProjectsWrapper/SectionTitle';
+import ProjectCard from '../../commons/ProjectsWrapper/Card';
 
-export default function ProjectsScreen({
-  image,
-  title,
-  description,
-  link,
-}) {
+export default function ProjectsScreen({ projects }) {
   return (
     <Box
       display="flex"
@@ -26,28 +19,33 @@ export default function ProjectsScreen({
       justifyContent="space-between"
       width="100%"
     >
-      <BackgroundWrapper>
-        <Grid.Container>
-          <ProjectsWrapper>
-            <ProjectsWrapper.Title>{title}</ProjectsWrapper.Title>
-            <ProjectsWrapper.Text>{description}</ProjectsWrapper.Text>
-            <ProjectsWrapper.RepoLink>{link}</ProjectsWrapper.RepoLink>
-            <Image
-              src={image}
-              alt="texto alternativo"
-              width="500"
-              height="500"
-            />
-          </ProjectsWrapper>
-        </Grid.Container>
-      </BackgroundWrapper>
+      <Grid.Container>
+        <ProjectsWrapper>
+          <SectionTitle />
+          <ProjectsWrapper.Section>
+            {projects.map((project, index) => {
+              const direction = index % 2 === 0 || index === 0 ? 'right' : 'left';
+
+              return (
+                <ProjectCard
+                  key={project.id}
+                  direction={direction}
+                  linkRepo={project.link}
+                  title={project.title}
+                  image={project.image}
+                  description={project.description}
+                  slug={project.slug}
+                />
+              );
+            })}
+          </ProjectsWrapper.Section>
+        </ProjectsWrapper>
+      </Grid.Container>
     </Box>
   );
 }
 
-Text.propTypes = {
-  image: PropTypes.string,
-  title: PropTypes.string,
-  description: PropTypes.string,
-  link: PropTypes.node,
+ProjectsScreen.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  projects: PropTypes.array.isRequired,
 };

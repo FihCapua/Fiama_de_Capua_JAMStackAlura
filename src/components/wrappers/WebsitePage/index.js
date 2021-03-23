@@ -6,31 +6,59 @@ import { BackgroundWrapper } from '../../commons/BackgroundWrapper/style/Backgro
 import Footer from '../../commons/Footer';
 import Menu from '../../commons/Menu';
 import { Box } from '../../foundation/Layout/Box';
-import SEO from '../../SEO';
+import SEO from '../../commons/SEO';
+import Modal from '../../commons/Modal';
+import FormCadastro from '../../patterns/FormCadastro';
 
-export default function WebsitePageWrapper({
-  children,
-  seoProps,
-  menuProps,
-}) {
+export const WebsitePageContext = React.createContext({
+  toggleRegisterModal: () => {
+
+  },
+});
+
+export default function WebsitePageWrapper(props) {
+  const { children, seoProps } = props;
+  const mockUserLogin = true;
+  const [isModalOpen, setModalState] = React.useState(false);
+
   return (
     // eslint-disable-next-line react/jsx-filename-extension
     <>
-      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-      <SEO {...seoProps} />
-      <Box
-        display="flex"
-        flexWrap="wrap"
-        flexDirection="column"
-        justifyContent="center"
-        width="100%"
+      <WebsitePageContext.Provider
+        value={{
+          toggleRegisterModal: () => {
+            setModalState(!isModalOpen);
+          },
+        }}
       >
-        <BackgroundWrapper>
-          {menuProps.display && <Menu />}
-          {children}
+        {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+        <SEO
+          // eslint-disable-next-line react/jsx-props-no-spreading
+          {...seoProps}
+        />
+        <Box
+          display="flex"
+          flex="1"
+          flexDirection="column"
+          justifyContent="center"
+        >
+          <Modal
+            isOpen={isModalOpen}
+            onClose={() => {
+              setModalState(false);
+            }}
+          >
+            {(propsDoModal) => (
+              <FormCadastro propsDoModal={propsDoModal} />
+            )}
+          </Modal>
+          <BackgroundWrapper>
+            <Menu display={mockUserLogin} />
+            {children}
+          </BackgroundWrapper>
           <Footer />
-        </BackgroundWrapper>
-      </Box>
+        </Box>
+      </WebsitePageContext.Provider>
     </>
   );
 }

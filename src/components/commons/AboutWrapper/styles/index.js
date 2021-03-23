@@ -41,8 +41,8 @@ AboutWrapper.Content = styled.div`
 
 AboutWrapper.Image = styled.img`
     background: url(https://mir-s3-cdn-cf.behance.net/user/276/d2ff2d30408991.56edd9abea663.jpg) center center / cover rgb(28, 24, 20);
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
     box-shadow: ${({ theme }) => theme.boxShadow};
 
@@ -61,13 +61,15 @@ AboutWrapper.Text = styled.p`
   }};
     ${TextStylesVariantsMap.paragraph1}
     text-align: justify;
-    margin: 60px 60px;
+    margin: 30px;
 
     ${breakPointsMedia({
     xs: css`
-            width: 65%;
+            text-align: center;
+            width: 90%;
         `,
     md: css`
+    text-align: justify;
             width: 50%;
         `,
     lg: css`
@@ -88,11 +90,44 @@ AboutWrapper.Repo = styled.div`
     color: ${function (props) {
     return props.theme.colors.secondary.main.color;
   }};
+  ${breakPointsMedia({
+    xs: css`
+            text-align: center;
+            width: 130%;
+        `,
+    md: css`
+            text-align: justify;
+            width: 80%;
+        `,
+    lg: css`
+            width: 90%;
+        `,
+    xl: css`
+            width: 100%;
+        `,
+  })}
 `;
 
 AboutWrapper.RepoDetails = styled.ul`
   width: 100%;
   margin: 15px 0;
+  ${breakPointsMedia({
+    xs: css`
+            text-align: center;
+            width: 200%;
+            margin-left: -30px;
+        `,
+    md: css`
+            text-align: center;
+            width: 80%;
+        `,
+    lg: css`
+            width: 90%;
+        `,
+    xl: css`
+            width: 100%;
+        `,
+  })}
 `;
 
 AboutWrapper.RepoText = styled.li`
@@ -111,4 +146,22 @@ AboutWrapper.RepoLink = styled.li`
     ${TextStylesVariantsMap.paragraph1}
   list-style: none;
   list-style-type: none;
+  ${breakPointsMedia({
+    xs: css`
+            font-size: 12px;
+        `,
+    md: css`
+            text-align: center;
+            width: 80%;
+            margin-left: 30px;
+        `,
+    lg: css`
+            width: 45%;
+            margin-left: 180px;
+        `,
+    xl: css`
+            width: 50%;
+            margin-left: 250px;
+        `,
+  })}
 `;

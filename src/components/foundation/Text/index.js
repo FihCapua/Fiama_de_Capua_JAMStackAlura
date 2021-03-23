@@ -45,6 +45,7 @@ export const TextStylesVariantsMap = {
 
 const TextBase = styled.span`
     ${(props) => TextStylesVariantsMap[props.variant]}
+    ${propToStyle('color')}
     ${propToStyle('width')}
     ${propToStyle('margin')}
     ${propToStyle('fontSize')}

@@ -1,20 +1,22 @@
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
+import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 import Text from '../../foundation/Text';
 import { NavBar } from './styles/NavBar';
 import { Logo } from '../../../theme/Logo/Logo';
 
-export default function Menu() {
+export default function Menu(props) {
+  const { display } = props;
   const links = [
     {
       texto: 'Sobre Mim',
-      url: '/about/about',
+      url: '/about',
     },
     {
       texto: 'Projetos',
-      url: '/projects/projects',
+      url: '/projects',
     },
     {
       texto: 'Contato',
@@ -22,10 +24,17 @@ export default function Menu() {
     },
   ];
 
+  if (!display) return false;
+
   return (
     <NavBar>
       <NavBar.LeftSide>
-        <Logo />
+        <NextLink href="/">
+          {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+          <a>
+            <Logo />
+          </a>
+        </NextLink>
       </NavBar.LeftSide>
       <NavBar.RightSide>
         {/* Percorrendo os links com map */}
@@ -48,3 +57,7 @@ export default function Menu() {
     </NavBar>
   );
 }
+
+Menu.propTypes = {
+  display: PropTypes.bool.isRequired,
+};

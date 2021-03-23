@@ -5,8 +5,6 @@ import { propToStyle } from '../../../../theme/utils/propToStyle';
 
 const Container = styled.div`
     width: 100%;
-    padding-right: 28px;
-    padding-left: 28px;
     margin-top: 5px;
     margin-right: auto;
     margin-left: auto;

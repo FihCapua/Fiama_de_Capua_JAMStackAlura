@@ -19,43 +19,39 @@ export default function AboutScreen({ repositories }) {
       flexDirection="column"
       justifyContent="space-between"
     >
-      <BackgroundWrapper>
-        <Menu />
-        <Grid.Container>
-          <AboutWrapper>
+      <Grid.Container>
+        <AboutWrapper>
+          <AboutWrapper.Title>
+            Quem sou eu?
+          </AboutWrapper.Title>
+          <AboutWrapper.Content>
+            <AboutWrapper.Image />
+            <AboutWrapper.Text>
+              Trabalhei 6 anos como web designer atuando em agências de marketing digital, e empresas.
+              Em busca de novos desafios e experiências optei pela transição da minha carreira como front-end em 2019,
+              dando continuidade ao meu projeto de aprendizado e de troca de conhecimentos na área de tecnologia,
+              desenvolvimento e comunicação.
+            </AboutWrapper.Text>
+          </AboutWrapper.Content>
+          <AboutWrapper.Repo>
             <AboutWrapper.Title>
-              Quem sou eu?
+              Meus Repositórios
             </AboutWrapper.Title>
-            <AboutWrapper.Content>
-              <AboutWrapper.Image />
-              <AboutWrapper.Text>
-                Trabalhei 6 anos como web designer atuando em agências de marketing digital, e empresas.
-                Em busca de novos desafios e experiências optei pela transição da minha carreira como front-end em 2019,
-                dando continuidade ao meu projeto de aprendizado e de troca de conhecimentos na área de tecnologia,
-                desenvolvimento e comunicação.
-              </AboutWrapper.Text>
-            </AboutWrapper.Content>
-            <AboutWrapper.Repo>
-              <AboutWrapper.Title>
-                Meus Repositórios
-              </AboutWrapper.Title>
-              {repositories.map((repository, index) => {
-                return (
-                  <>
-                    <AboutWrapper.RepoDetails>
-                      <AboutWrapper.RepoText key={index}>{repository.name}</AboutWrapper.RepoText>
-                      <a target="_blank" rel="noreferrer" href={repository.html_url}>
-                        <AboutWrapper.RepoLink key={index}>{repository.full_name}</AboutWrapper.RepoLink>
-                      </a>
-                    </AboutWrapper.RepoDetails>
-                  </>
-                );
-              })}
-            </AboutWrapper.Repo>
-          </AboutWrapper>
-        </Grid.Container>
-        <Footer />
-      </BackgroundWrapper>
+            {repositories.map((repository, index) => {
+              return (
+                <>
+                  <AboutWrapper.RepoDetails>
+                    <AboutWrapper.RepoText key={index}>{repository.name}</AboutWrapper.RepoText>
+                    <a target="_blank" rel="noreferrer" href={repository.html_url}>
+                      <AboutWrapper.RepoLink key={index}>{repository.full_name}</AboutWrapper.RepoLink>
+                    </a>
+                  </AboutWrapper.RepoDetails>
+                </>
+              );
+            })}
+          </AboutWrapper.Repo>
+        </AboutWrapper>
+      </Grid.Container>
     </Box>
   );
 }

@@ -1,6 +1,7 @@
 /* eslint-disable func-names */
 /* eslint-disable import/prefer-default-export */
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
+import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
 import { TextStylesVariantsMap } from '../../../foundation/Text/index';
 
 export const ContactWrapper = styled.div`
@@ -11,7 +12,27 @@ export const ContactWrapper = styled.div`
     background-color: ${function (props) {
     return props.theme.colors.primary.main.color;
   }};  
-    padding-bottom: 50px;
+    padding: 160px;
+    ${breakPointsMedia({
+    xs: css`
+            width: 100%;
+            padding: 50px;
+        `,
+    md: css`
+            width: 90%;
+            margin: 0 auto;
+            margin-top: -5px;
+        `,
+    lg: css`
+            width: 100%;
+            padding: 160px;
+        `,
+    xl: css`
+            width: 100%;
+            margin: -5px 0;
+            padding: 160px;
+        `,
+  })}
 `;
 
 ContactWrapper.Title = styled.h2`
