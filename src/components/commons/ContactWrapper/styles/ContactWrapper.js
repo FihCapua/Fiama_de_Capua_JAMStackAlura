@@ -16,7 +16,7 @@ export const ContactWrapper = styled.div`
     ${breakPointsMedia({
     xs: css`
             width: 100%;
-            padding: 50px;
+            padding: 90px;
         `,
     md: css`
             width: 90%;
@@ -52,4 +52,21 @@ ContactWrapper.Text = styled.p`
     return props.theme.colors.secondary.main.color;
   }};
     ${TextStylesVariantsMap.paragraph1}
+    ${breakPointsMedia({
+    xs: css`
+            width: 100%;
+            margin: 10px;
+            padding-bottom: 10px;
+        `,
+    md: css`
+            width: 100%;
+        `,
+    lg: css`
+            width: 95%;
+            margin: 0;
+        `,
+    xl: css`
+            width: 100%;
+        `,
+  })}
 `;

@@ -87,6 +87,7 @@ DetailsWrapper.Content = styled.div`
     xs: css`
             width: 100%;
             padding: 5px;
+            margin: 20px;
         `,
     md: css`
             width: 50%;
