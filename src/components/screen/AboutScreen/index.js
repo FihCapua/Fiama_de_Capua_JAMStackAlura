@@ -30,10 +30,10 @@ export default function AboutScreen({ repositories }) {
               desenvolvimento e comunicação.
             </AboutWrapper.Text>
           </AboutWrapper.Content>
+          <AboutWrapper.Title>
+            Meus Repositórios
+          </AboutWrapper.Title>
           <AboutWrapper.Repo>
-            <AboutWrapper.Title>
-              Meus Repositórios
-            </AboutWrapper.Title>
             {repositories.map((repository, index) => {
               return (
                 <>

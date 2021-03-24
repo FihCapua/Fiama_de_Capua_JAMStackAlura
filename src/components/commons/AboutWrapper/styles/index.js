@@ -100,10 +100,16 @@ AboutWrapper.Repo = styled.div`
             width: 80%;
         `,
     lg: css`
-            width: 90%;
+             width: 90%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
         `,
     xl: css`
             width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
         `,
   })}
 `;
@@ -156,12 +162,12 @@ AboutWrapper.RepoLink = styled.li`
             margin-left: 30px;
         `,
     lg: css`
-            width: 45%;
-            margin-left: 180px;
+            width: 100%;
+            margin-left: -3px;
         `,
     xl: css`
             width: 50%;
-            margin-left: 250px;
+            margin-left: 115px;
         `,
   })}
 `;
