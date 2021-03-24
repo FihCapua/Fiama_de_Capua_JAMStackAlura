@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import Link from '../Link';
 import { TextStylesVariantsMap } from '../../foundation/Text/index';
 import { propToStyle } from '../../../theme/utils/propToStyle';
+import { breakPointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 // eslint-disable-next-line import/prefer-default-export
 const ButtonWrapper = styled.button`
@@ -42,6 +43,25 @@ const ButtonWrapper = styled.button`
   ${propToStyle('margin')}
   ${propToStyle('color')}
   ${propToStyle('fontSize')}
+
+  ${breakPointsMedia({
+    xs: css`
+            width: 75%;
+            height: 10%;
+        `,
+    md: css`
+            width: 40%;
+            height: 15%;
+        `,
+    lg: css`
+            width: 25%;
+            height: 15%;
+        `,
+    xl: css`
+            width: 25%;
+            height: 15%;
+        `,
+  })}
 `;
 
 // eslint-disable-next-line import/prefer-default-export
