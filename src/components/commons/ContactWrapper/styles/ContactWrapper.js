@@ -11,7 +11,8 @@ export const ContactWrapper = styled.div`
     margin: -5px 0;
     background-color: ${function (props) {
     return props.theme.colors.primary.main.color;
-  }};  
+  }};
+    height: 100vh;  
     padding: 160px;
     ${breakPointsMedia({
     xs: css`
@@ -43,6 +44,24 @@ ContactWrapper.Title = styled.h2`
   }};
     ${TextStylesVariantsMap.title}
     padding: 25px 0 0 0;
+    ${breakPointsMedia({
+    xs: css`
+            padding: 0;
+            margin-top: 50px;
+        `,
+    md: css`
+            width: 100%;
+            margin-top: 20px;
+        `,
+    lg: css`
+            width: 95%;
+            margin: 0;
+        `,
+    xl: css`
+            width: 100%;
+            margin-top: -30px;
+        `,
+  })}
 `;
 
 ContactWrapper.Text = styled.p`
@@ -51,7 +70,7 @@ ContactWrapper.Text = styled.p`
   color: ${function (props) {
     return props.theme.colors.secondary.main.color;
   }};
-    ${TextStylesVariantsMap.paragraph1}
+    ${TextStylesVariantsMap.subTitle}
     ${breakPointsMedia({
     xs: css`
             width: 100%;

@@ -10,6 +10,7 @@ export const DetailsWrapper = styled.div`
     return props.theme.colors.background.dark.color;
   }};
     padding-bottom: 50px;
+    height: 105vh;
 `;
 
 DetailsWrapper.Section = styled.div`
