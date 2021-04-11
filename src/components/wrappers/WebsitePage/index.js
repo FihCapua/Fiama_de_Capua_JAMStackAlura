@@ -4,6 +4,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BackgroundWrapper } from '../../commons/BackgroundWrapper/style/BackgroundWrapper';
 import Footer from '../../commons/Footer';
+// eslint-disable-next-line import/no-cycle
 import Menu from '../../commons/Menu';
 import { Box } from '../../foundation/Layout/Box';
 import SEO from '../../commons/SEO';

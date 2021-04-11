@@ -6,8 +6,12 @@ import NextLink from 'next/link';
 import Text from '../../foundation/Text';
 import { NavBar } from './styles/NavBar';
 import { Logo } from '../../../theme/Logo/Logo';
+// eslint-disable-next-line import/no-cycle
+import { WebsitePageContext } from '../../wrappers/WebsitePage/index';
 
 export default function Menu(props) {
+  const websitePageContext = React.useContext(WebsitePageContext);
+
   const { display } = props;
   const links = [
     {
@@ -57,6 +61,7 @@ export default function Menu(props) {
           style={{
             color: '#e1a7f9',
           }}
+          onClick={() => websitePageContext.toggleRegisterModal()}
         >
           Contato
         </Text>
