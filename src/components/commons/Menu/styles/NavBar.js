@@ -35,17 +35,38 @@ NavBar.LeftSide = styled.div`
   ${breakPointsMedia({
     xs: css`
           width: 60%;
-          margin: 33px 0;
+          margin: 33px 30px;
         `,
     md: css`
           margin-left: 30px;
         `,
     lg: css`
-          width: 65%;
-          margin: -9px 120px;
+          margin: 50px 20px;
         `,
     xl: css`
-          margin: -9px 170px;
+          margin: 40px 220px;
+        `,
+  })}
+`;
+
+NavBar.WrapperMenu = styled.div`
+  display: inline-flex;
+  width: 50%;
+  ${breakPointsMedia({
+    xs: css`
+          width: 100%;
+          margin: 33px -40px;
+        `,
+    md: css`
+          width: 100%;
+          margin-top: 90px;
+        `,
+    lg: css`
+          width: 50%;
+        `,
+    xl: css`
+         display: inline-flex;
+          width: 50%;
         `,
   })}
 `;
@@ -60,63 +81,47 @@ NavBar.CentralSide = styled.div`
     }
     ${breakPointsMedia({
     xs: css`
-          display: flex;
+          width: 60%;
           flex-wrap: wrap;
-          margin: 0;
-          ul {
-            width: 150px;
-          }
-    `,
-    sm: css`
-          display: flex;
-          flex-wrap: wrap;
-          margin: 0 15px;
-          ul {
-            width: 130px;
-          }
+          margin-top: -40px;
         `,
     md: css`
+          width: 100%;
           display: flex;
-          flex-wrap: wrap;
-          margin-left: -490px;
         `,
     lg: css`
-            display: flex;
-            flex-wrap: nowrap;
-            margin: 0 100px;
+          display: flex;
+        `,
+    xl: css`
+         display: flex;
         `,
   })}
 `;
 
 NavBar.RightSide = styled.div`
     cursor: pointer;
-    text-align: center;
-    margin-top: 16px;
-    margin-left: -110px;
+    margin: 15px 20px;
     width: 20%;
-${breakPointsMedia({
-    xs: css`    
-          margin-top: 53px;
-          margin-left: -120px;
-          width: 90%;
-    `,
-    sm: css`
-          margin-left: -269px;
-          margin-top: 50px;
-          width: 40%;
+    ${breakPointsMedia({
+    xs: css`
+          position: relative;
+          top: 75px;
+          right: 115px;
         `,
     md: css`
-          margin-left: -415px;
-          margin-top: 16px;
+          cursor: pointer;
+          top: -38px;
+          right: 103px; 
         `,
     lg: css`
-          margin-top: 16px;
-          margin-left: -90px;
+        cursor: pointer;
+        margin: 16px 25px;
+        width: 20%;
         `,
     xl: css`
-          margin-top: 16px;
-          margin-left: -110px;
-          width: 20%;
+        cursor: pointer;
+        margin: 15px 20px;
+        width: 20%;
         `,
   })}
 `;
