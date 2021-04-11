@@ -152,7 +152,10 @@ function FormContent() {
           <Text
             variant="smallestParagraph"
             tag="p"
-            color="primary.main.contrastText"
+            style={{
+              textAlign: 'center',
+              color: '#fff',
+            }}
           >
             Por favor, insira um e-mail válido
           </Text>
@@ -189,7 +192,13 @@ function FormContent() {
             className="lottie-container basic"
             config={{ animationData: loadingAnimation, loop: false, autoplay: true }}
           />
-          <p>Enviando seus dados, aguarde...</p>
+          <p
+            style={{
+              color: '#fff',
+            }}
+          >
+            Enviando seus dados, aguarde...
+          </p>
         </Box>
       )}
 
@@ -205,7 +214,13 @@ function FormContent() {
             className="lottie-container basic"
             config={{ animationData: successAnimation, loop: false, autoplay: true }}
           />
-          <p>Dados enviados com sucesso</p>
+          <p
+            style={{
+              color: '#fff',
+            }}
+          >
+            Dados enviados com sucesso
+          </p>
         </Box>
       )}
 
@@ -221,7 +236,13 @@ function FormContent() {
             className="lottie-container basic"
             config={{ animationData: errorAnimation, loop: false, autoplay: true }}
           />
-          <p>Erro no envio dos dados</p>
+          <p
+            style={{
+              color: '#fff',
+            }}
+          >
+            Erro no envio dos dados
+          </p>
         </Box>
       )}
 
