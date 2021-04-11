@@ -8,30 +8,18 @@ export const ContactWrapper = styled.div`
     display: flex;
     justify-content: center; 
     flex-wrap: wrap;
-    margin: -5px 0;
-    background-color: ${function (props) {
-    return props.theme.colors.primary.main.color;
-  }};
-    height: 100vh;  
-    padding: 160px;
     ${breakPointsMedia({
     xs: css`
             width: 100%;
-            padding: 90px;
         `,
     md: css`
             width: 90%;
-            margin: 0 auto;
-            margin-top: -5px;
         `,
     lg: css`
             width: 100%;
-            padding: 160px;
         `,
     xl: css`
             width: 100%;
-            margin: -5px 0;
-            padding: 160px;
         `,
   })}
 `;
@@ -40,49 +28,42 @@ ContactWrapper.Title = styled.h2`
     width: 100%;
     text-align: center;
     color: ${function (props) {
-    return props.theme.colors.primary.main.contrastText;
+    return props.theme.colors.secondary.main.contrastText;
   }};
-    ${TextStylesVariantsMap.title}
+    ${TextStylesVariantsMap.titleXS}
     padding: 25px 0 0 0;
     ${breakPointsMedia({
     xs: css`
             padding: 0;
-            margin-top: 50px;
         `,
     md: css`
             width: 100%;
-            margin-top: 20px;
         `,
     lg: css`
             width: 95%;
-            margin: 0;
         `,
     xl: css`
             width: 100%;
-            margin-top: -30px;
         `,
   })}
 `;
 
 ContactWrapper.Text = styled.p`
-  width: 100%;
+  width: 85%;
   text-align: center;
   color: ${function (props) {
     return props.theme.colors.secondary.main.color;
   }};
-    ${TextStylesVariantsMap.subTitle}
+    ${TextStylesVariantsMap.paragraph1}
     ${breakPointsMedia({
     xs: css`
             width: 100%;
-            margin: 10px;
-            padding-bottom: 10px;
         `,
     md: css`
             width: 100%;
         `,
     lg: css`
-            width: 95%;
-            margin: 0;
+            width: 85%;
         `,
     xl: css`
             width: 100%;

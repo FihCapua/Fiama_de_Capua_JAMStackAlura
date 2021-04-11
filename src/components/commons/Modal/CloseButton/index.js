@@ -6,7 +6,7 @@ export const SVG = styled.svg`
     position: relative;
     top: 0;
     left: 64%;
-    stroke: ${({ theme }) => theme.colors.tertiary.light.color};
+    stroke: ${({ theme }) => theme.colors.background.main.color};
     ${breakPointsMedia({
     xs: css`
             left: 80%;

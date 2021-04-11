@@ -7,7 +7,7 @@ export const typographyVariants = {
     lineHeight: 1.25, // 125%
   },
   titleXS: {
-    fontSize: '22px',
+    fontSize: '25px',
     fontWeight: '600',
     lineHeight: 1.25, // 125%
   },

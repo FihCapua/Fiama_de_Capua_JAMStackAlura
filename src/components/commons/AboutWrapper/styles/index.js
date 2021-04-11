@@ -82,58 +82,20 @@ AboutWrapper.Text = styled.p`
 `;
 
 AboutWrapper.Repo = styled.div`
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 80px;
-    color: ${function (props) {
-    return props.theme.colors.secondary.main.color;
-  }};
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   ${breakPointsMedia({
     xs: css`
-            text-align: center;
-            width: 130%;
+          grid-template-columns: none;
         `,
     md: css`
-            text-align: justify;
-            width: 80%;
-        `,
-    lg: css`
-             width: 90%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-content: center;
-        `,
-    xl: css`
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            justify-content: center;
-        `,
+       grid-template-columns: 1fr 1fr;
+    `,
   })}
 `;
 
 AboutWrapper.RepoDetails = styled.ul`
   width: 100%;
-  margin: 15px 0;
-  ${breakPointsMedia({
-    xs: css`
-            text-align: center;
-            width: 200%;
-            margin-left: -30px;
-        `,
-    md: css`
-            text-align: center;
-            width: 80%;
-        `,
-    lg: css`
-            width: 90%;
-        `,
-    xl: css`
-            width: 100%;
-        `,
-  })}
 `;
 
 AboutWrapper.RepoText = styled.li`
@@ -142,6 +104,22 @@ AboutWrapper.RepoText = styled.li`
   color: ${function (props) {
     return props.theme.colors.primary.main.contrastText;
   }};
+  font-size: 15px;
+  font-weight: bold;
+  ${breakPointsMedia({
+    xs: css`
+      font-size: 12px;
+    `,
+    md: css`
+      font-size: 14px;
+    `,
+    lg: css`
+      font-size: 15px;
+        `,
+    xl: css`
+      font-size: 15px;
+        `,
+  })}
 `;
 
 AboutWrapper.RepoLink = styled.li`
@@ -152,22 +130,19 @@ AboutWrapper.RepoLink = styled.li`
     ${TextStylesVariantsMap.paragraph1}
   list-style: none;
   list-style-type: none;
+  font-size: 15px;
   ${breakPointsMedia({
     xs: css`
-            font-size: 12px;
-        `,
+      font-size: 12px;
+    `,
     md: css`
-            text-align: center;
-            width: 80%;
-            margin-left: 30px;
-        `,
+      font-size: 14px;
+    `,
     lg: css`
-            width: 100%;
-            margin-left: -3px;
+      font-size: 15px;
         `,
     xl: css`
-            width: 50%;
-            margin-left: 115px;
+      font-size: 15px;
         `,
   })}
 `;

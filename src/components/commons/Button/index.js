@@ -12,6 +12,7 @@ const ButtonWrapper = styled.button`
   border: none;
   padding: 10px;
   cursor: pointer;
+  margin-top: 15px;
   background-color: ${function (props) {
     return props.theme.colors.button.main.color;
   }}; 
@@ -54,12 +55,12 @@ const ButtonWrapper = styled.button`
             height: 15%;
         `,
     lg: css`
-            width: 25%;
-            height: 15%;
+            width: 60%;
+            height: 8%;
         `,
     xl: css`
-            width: 25%;
-            height: 15%;
+            width: 60%;
+            height: 8%;
         `,
   })}
 `;

@@ -18,10 +18,6 @@ export default function Menu(props) {
       texto: 'Projetos',
       url: '/projects',
     },
-    {
-      texto: 'Contato',
-      url: '/contact',
-    },
   ];
 
   if (!display) return false;
@@ -36,7 +32,7 @@ export default function Menu(props) {
           </a>
         </NextLink>
       </NavBar.LeftSide>
-      <NavBar.RightSide>
+      <NavBar.CentralSide>
         {/* Percorrendo os links com map */}
         {links.map((link, index) => {
           const key = link.texto + index;
@@ -53,6 +49,17 @@ export default function Menu(props) {
             </ul>
           );
         })}
+      </NavBar.CentralSide>
+      <NavBar.RightSide>
+        <Text
+          tag="a"
+          variant="paragraph1"
+          style={{
+            color: '#e1a7f9',
+          }}
+        >
+          Contato
+        </Text>
       </NavBar.RightSide>
     </NavBar>
   );

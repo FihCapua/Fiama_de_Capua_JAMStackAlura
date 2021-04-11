@@ -18,7 +18,7 @@ const colors = {
   button: {
     main: {
       color: '#ca6ded',
-      contrastText: '#14133c',
+      contrastText: '#ffffff',
     },
   },
   primary: {
@@ -36,7 +36,7 @@ const colors = {
   tertiary: {
     main: {
       color: '#4c0f65',
-      contrastText: '#fff',
+      contrastText: '#ffffff',
     },
     light: {
       color: '#2c245f',
