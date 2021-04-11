@@ -5,10 +5,11 @@ import React from 'react';
 export function Logo() {
   return (
     <svg
+      alt="Logo Fiama de Capua"
       version="1.0"
       xmlns="http://www.w3.org/2000/svg"
       width="201"
-      height="67"
+      height="75"
       viewBox="0 0 201 67"
       preserveAspectRatio="xMidYMid meet"
     >

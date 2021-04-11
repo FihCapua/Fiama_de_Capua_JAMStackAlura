@@ -8,6 +8,7 @@ import { Grid } from '../../foundation/Layout/Grid';
 import loadingAnimation from './animations/loading.json';
 import successAnimation from './animations/success.json';
 import errorAnimation from './animations/error.json';
+import { ContactWrapper } from '../../commons/ContactWrapper/styles/ContactWrapper';
 
 const formStates = {
   DEFAULT: 'DEFAULT',
@@ -117,6 +118,19 @@ function FormContent() {
       }}
     >
       <div>
+        <ContactWrapper>
+          <ContactWrapper.Title>
+            Vamos bater um papo?
+          </ContactWrapper.Title>
+          <ContactWrapper.Text>
+            Vamos criar juntos uma solução para o seu projeto,
+            <br />
+            de acordo com a sua necessidade?
+            <br />
+            Bora lá!
+          </ContactWrapper.Text>
+        </ContactWrapper>
+
         <TextField
           tag="input"
           type="text"
@@ -125,8 +139,7 @@ function FormContent() {
           value={userInfo.name}
           onChange={handleChange}
         />
-      </div>
-      <div>
+
         <TextField
           tag="input"
           type="email"
@@ -144,8 +157,7 @@ function FormContent() {
             Por favor, insira um e-mail válido
           </Text>
         )}
-      </div>
-      <div>
+
         <TextArea
           tag="textarea"
           type="text"
@@ -236,7 +248,7 @@ export default function FormCadastro({ propsDoModal }) {
         }}
       >
         <Box
-          height="500px"
+          height="600px"
           margin="0 -10px"
           borderRadius="8px"
           boxShadow="18px 4px 24px #070713"
@@ -248,7 +260,7 @@ export default function FormCadastro({ propsDoModal }) {
             xs: '16px',
             md: '45px',
           }}
-          backgroundColor="white"
+          backgroundColor="#0b092e"
           // eslint-disable-next-line react/jsx-props-no-spreading
           {...propsDoModal}
         >

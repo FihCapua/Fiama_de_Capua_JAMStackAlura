@@ -3,11 +3,15 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const InputWrapper = styled.div`
-  margin-bottom: 17px;
+    display: flex;
+    justify-content: center;
+    margin: 17px 0; 
 `;
 
 const TextAreaWrapper = styled.div`
-  margin-bottom: 17px;
+    display: flex;
+    justify-content: center;
+    margin: 17px 0; 
 `;
 
 const Input = styled.input`
@@ -16,7 +20,6 @@ const Input = styled.input`
   outline: 0;
   border: 1px solid #4d4d4d;
   border-radius: ${({ theme }) => theme.borderRadius};
-  margin-left: 30px;
 `;
 
 const TextAreaMsg = styled.textarea`
@@ -26,7 +29,6 @@ const TextAreaMsg = styled.textarea`
   outline: 0;
   border-radius: ${({ theme }) => theme.borderRadius};
   margin-top: 2px;
-  margin-left: 29px;
 `;
 
 Input.defaultProps = {

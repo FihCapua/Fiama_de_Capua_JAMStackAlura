@@ -34,7 +34,7 @@ NavBar.LeftSide = styled.div`
 
   ${breakPointsMedia({
     xs: css`
-          width: 95%;
+          width: 60%;
           margin: 33px 0;
         `,
     md: css`
@@ -50,8 +50,8 @@ NavBar.LeftSide = styled.div`
   })}
 `;
 
-NavBar.RightSide = styled.div`
-    display: flex;
+NavBar.CentralSide = styled.div`
+  display: flex;
     ul {
       list-style-type: none;
     }
@@ -84,6 +84,36 @@ NavBar.RightSide = styled.div`
             display: flex;
             flex-wrap: nowrap;
             margin: 0 100px;
+        `,
+  })}
+`;
+
+NavBar.RightSide = styled.div`
+    cursor: pointer;
+    text-align: center;
+    margin-top: 16px;
+    margin-left: -260px;
+${breakPointsMedia({
+    xs: css`    
+          margin-top: 53px;
+          margin-left: -120px;
+          width: 70%;
+    `,
+    sm: css`
+          margin-left: -153px;
+          margin-top: 50px;
+        `,
+    md: css`
+          margin-left: -415px;
+          margin-top: 52px;
+        `,
+    lg: css`
+          margin-top: 16px;
+          margin-left: -160px;
+        `,
+    xl: css`
+          margin-top: 16px;
+          margin-left: -260px;
         `,
   })}
 `;
