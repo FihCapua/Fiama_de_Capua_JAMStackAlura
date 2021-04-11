@@ -13,8 +13,8 @@ export const NavBar = styled.nav`
     return props.theme.colors.tertiary.light.color;
   }};
   padding: 0px 10px;
+  height: 120px;
   ${TextStylesVariantsMap.paragraph1};
-
   ${breakPointsMedia({
     xs: css`
             justify-content: space-around;
@@ -34,17 +34,17 @@ NavBar.LeftSide = styled.div`
 
   ${breakPointsMedia({
     xs: css`
-          width: 60%;
-          margin: 33px 30px;
+          width: 100%;
+          margin: 30px -20px;
         `,
     md: css`
           margin-left: 30px;
         `,
     lg: css`
-          margin: 50px 20px;
+          margin: 20px;
         `,
     xl: css`
-          margin: 40px 220px;
+          margin: 20px 120px;
         `,
   })}
 `;
@@ -55,7 +55,7 @@ NavBar.WrapperMenu = styled.div`
   ${breakPointsMedia({
     xs: css`
           width: 100%;
-          margin: 33px -40px;
+          margin: 23px -12px;
         `,
     md: css`
           width: 100%;
@@ -63,6 +63,7 @@ NavBar.WrapperMenu = styled.div`
         `,
     lg: css`
           width: 50%;
+          margin-top: 70px;
         `,
     xl: css`
          display: inline-flex;
@@ -81,7 +82,7 @@ NavBar.CentralSide = styled.div`
     }
     ${breakPointsMedia({
     xs: css`
-          width: 60%;
+          width: 90%;
           flex-wrap: wrap;
           margin-top: -40px;
         `,
@@ -100,28 +101,28 @@ NavBar.CentralSide = styled.div`
 
 NavBar.RightSide = styled.div`
     cursor: pointer;
-    margin: 15px 20px;
-    width: 20%;
+    margin: 15px -50px;
+    width: 35%;
     ${breakPointsMedia({
     xs: css`
           position: relative;
-          top: 75px;
-          right: 115px;
+          top: 60px;
+          right: 57px;
         `,
     md: css`
           cursor: pointer;
           top: -38px;
-          right: 103px; 
+          right: 20px; 
         `,
     lg: css`
         cursor: pointer;
-        margin: 16px 25px;
-        width: 20%;
+        margin: 16px 35px;
+        width: 0;
         `,
     xl: css`
         cursor: pointer;
-        margin: 15px 20px;
-        width: 20%;
+        margin: 15px -50px;
+        width: 35%;
         `,
   })}
 `;
