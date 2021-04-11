@@ -78,7 +78,7 @@ NavBar.CentralSide = styled.div`
     md: css`
           display: flex;
           flex-wrap: wrap;
-          margin: 0 50px;
+          margin-left: -490px;
         `,
     lg: css`
             display: flex;
@@ -92,28 +92,31 @@ NavBar.RightSide = styled.div`
     cursor: pointer;
     text-align: center;
     margin-top: 16px;
-    margin-left: -260px;
+    margin-left: -110px;
+    width: 20%;
 ${breakPointsMedia({
     xs: css`    
           margin-top: 53px;
           margin-left: -120px;
-          width: 70%;
+          width: 90%;
     `,
     sm: css`
-          margin-left: -153px;
+          margin-left: -269px;
           margin-top: 50px;
+          width: 40%;
         `,
     md: css`
           margin-left: -415px;
-          margin-top: 52px;
+          margin-top: 16px;
         `,
     lg: css`
           margin-top: 16px;
-          margin-left: -160px;
+          margin-left: -90px;
         `,
     xl: css`
           margin-top: 16px;
-          margin-left: -260px;
+          margin-left: -110px;
+          width: 20%;
         `,
   })}
 `;
