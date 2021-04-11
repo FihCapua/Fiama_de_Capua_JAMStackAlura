@@ -36,36 +36,38 @@ export default function Menu(props) {
           </a>
         </NextLink>
       </NavBar.LeftSide>
-      <NavBar.CentralSide>
-        {/* Percorrendo os links com map */}
-        {links.map((link, index) => {
-          const key = link.texto + index;
+      <NavBar.WrapperMenu>
+        <NavBar.CentralSide>
+          {/* Percorrendo os links com map */}
+          {links.map((link, index) => {
+            const key = link.texto + index;
 
-          return (
-            <ul key={key}>
-              <li key={link.url}>
-                <NextLink href={link.url}>
-                  <Text tag="a" variant="paragraph1" href={link.url}>
-                    {link.texto}
-                  </Text>
-                </NextLink>
-              </li>
-            </ul>
-          );
-        })}
-      </NavBar.CentralSide>
-      <NavBar.RightSide>
-        <Text
-          tag="a"
-          variant="paragraph1"
-          style={{
-            color: '#e1a7f9',
-          }}
-          onClick={() => websitePageContext.toggleRegisterModal()}
-        >
-          Contato
-        </Text>
-      </NavBar.RightSide>
+            return (
+              <ul key={key}>
+                <li key={link.url}>
+                  <NextLink href={link.url}>
+                    <Text tag="a" variant="paragraph1" href={link.url}>
+                      {link.texto}
+                    </Text>
+                  </NextLink>
+                </li>
+              </ul>
+            );
+          })}
+        </NavBar.CentralSide>
+        <NavBar.RightSide>
+          <Text
+            tag="a"
+            variant="paragraph1"
+            style={{
+              color: '#e1a7f9',
+            }}
+            onClick={() => websitePageContext.toggleRegisterModal()}
+          >
+            Contato
+          </Text>
+        </NavBar.RightSide>
+      </NavBar.WrapperMenu>
     </NavBar>
   );
 }
