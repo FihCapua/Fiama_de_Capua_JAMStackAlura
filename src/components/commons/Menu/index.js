@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
@@ -56,13 +57,13 @@ export default function Menu(props) {
           })}
         </NavBar.CentralSide>
         <NavBar.RightSide>
-          <button 
+          <button
             name="contato"
             style={{
               backgroundColor: 'transparent',
               color: '#e1a7f9',
               border: 'none',
-              outline: '0'
+              outline: '0',
             }}
             onClick={() => websitePageContext.toggleRegisterModal()}
           >
