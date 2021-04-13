@@ -54,19 +54,19 @@ export default function Menu(props) {
               </ul>
             );
           })}
+          <NavBar.RightSide>
+            <Text
+              tag="a"
+              variant="paragraph1"
+              style={{
+                color: '#e1a7f9',
+              }}
+              onClick={() => websitePageContext.toggleRegisterModal()}
+            >
+              Contato
+            </Text>
+          </NavBar.RightSide>
         </NavBar.CentralSide>
-        <NavBar.RightSide>
-          <Text
-            tag="a"
-            variant="paragraph1"
-            style={{
-              color: '#e1a7f9',
-            }}
-            onClick={() => websitePageContext.toggleRegisterModal()}
-          >
-            Contato
-          </Text>
-        </NavBar.RightSide>
       </NavBar.WrapperMenu>
     </NavBar>
   );
