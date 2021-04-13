@@ -7,7 +7,6 @@ import { TextStylesVariantsMap } from '../../foundation/Text/index';
 import { propToStyle } from '../../../theme/utils/propToStyle';
 import { breakPointsMedia } from '../../../theme/utils/breakpointsMedia';
 
-// eslint-disable-next-line import/prefer-default-export
 const ButtonWrapper = styled.button`
   border: none;
   padding: 10px;
