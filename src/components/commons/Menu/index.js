@@ -1,4 +1,3 @@
-/* eslint-disable react/button-has-type */
 /* eslint-disable arrow-body-style */
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
@@ -55,26 +54,19 @@ export default function Menu(props) {
               </ul>
             );
           })}
-        </NavBar.CentralSide>
-        <NavBar.RightSide>
-          <button
-            name="contato"
-            style={{
-              backgroundColor: 'transparent',
-              color: '#e1a7f9',
-              border: 'none',
-              outline: '0',
-            }}
-            onClick={() => websitePageContext.toggleRegisterModal()}
-          >
+          <NavBar.RightSide>
             <Text
               tag="a"
               variant="paragraph1"
+              style={{
+                color: '#e1a7f9',
+              }}
+              onClick={() => websitePageContext.toggleRegisterModal()}
             >
               Contato
             </Text>
-          </button>
-        </NavBar.RightSide>
+          </NavBar.RightSide>
+        </NavBar.CentralSide>
       </NavBar.WrapperMenu>
     </NavBar>
   );
