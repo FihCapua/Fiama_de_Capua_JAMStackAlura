@@ -56,16 +56,23 @@ export default function Menu(props) {
           })}
         </NavBar.CentralSide>
         <NavBar.RightSide>
-          <Text
-            tag="a"
-            variant="paragraph1"
+          <button 
+            name="contato"
             style={{
+              backgroundColor: 'transparent',
               color: '#e1a7f9',
+              border: 'none',
+              outline: '0'
             }}
             onClick={() => websitePageContext.toggleRegisterModal()}
           >
-            Contato
-          </Text>
+            <Text
+              tag="a"
+              variant="paragraph1"
+            >
+              Contato
+            </Text>
+          </button>
         </NavBar.RightSide>
       </NavBar.WrapperMenu>
     </NavBar>
