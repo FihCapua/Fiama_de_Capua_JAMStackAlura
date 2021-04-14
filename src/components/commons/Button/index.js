@@ -47,19 +47,15 @@ const ButtonWrapper = styled.button`
   ${breakPointsMedia({
     xs: css`
             width: 75%;
-            height: 10%;
         `,
     md: css`
             width: 40%;
-            height: 15%;
         `,
     lg: css`
             width: 60%;
-            height: 8%;
         `,
     xl: css`
             width: 60%;
-            height: 8%;
         `,
   })}
 `;

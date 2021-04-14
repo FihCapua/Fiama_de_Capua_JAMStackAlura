@@ -9,7 +9,7 @@ export const SVG = styled.svg`
     stroke: ${({ theme }) => theme.colors.background.main.color};
     ${breakPointsMedia({
     xs: css`
-            left: 80%;
+            left: 85%;
         `,
     md: css`
             left: 64%;

@@ -35,12 +35,14 @@ ContactWrapper.Title = styled.h2`
     ${breakPointsMedia({
     xs: css`
             padding: 0;
+            font-size: 15px;
         `,
     md: css`
             width: 100%;
         `,
     lg: css`
             width: 95%;
+            font-size: 25px;
         `,
     xl: css`
             width: 100%;
@@ -58,6 +60,7 @@ ContactWrapper.Text = styled.p`
     ${breakPointsMedia({
     xs: css`
             width: 100%;
+            font-size: 13px;
         `,
     md: css`
             width: 100%;

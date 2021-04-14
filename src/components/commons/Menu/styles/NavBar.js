@@ -70,5 +70,5 @@ NavBar.CentralSide = styled.div`
 `;
 
 NavBar.RightSide = styled.div`
-    margin: 16px 35px;
+    margin: 16px 30px;
 `;
