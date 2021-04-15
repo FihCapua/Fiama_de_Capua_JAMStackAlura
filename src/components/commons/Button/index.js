@@ -49,7 +49,7 @@ const ButtonWrapper = styled.button`
             width: 75%;
         `,
     md: css`
-            width: 40%;
+            width: 75%;
         `,
     lg: css`
             width: 60%;
