@@ -1,8 +1,8 @@
 /// <reference types="cypress" />;
 
-describe('/', () => {
-  it('visit some page and go to the modal Contact Form', () => {
-    cy.visit('/');
+describe('/pages', () => {
+  it('go to the Contact Form', () => {
+    cy.visit('localhost:3000');
   });
   describe('when user click in contact', () => {
     it('open the contact modal', () => {
