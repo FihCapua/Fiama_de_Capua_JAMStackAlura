@@ -11,15 +11,11 @@ export const ContactWrapper = styled.div`
     ${breakPointsMedia({
     xs: css`
             width: 100%;
-        `,
-    md: css`
-            width: 90%;
-        `,
-    lg: css`
-            width: 100%;
+            margin-top: -35px;
         `,
     xl: css`
             width: 100%;
+            margin-top: 0;
         `,
   })}
 `;
