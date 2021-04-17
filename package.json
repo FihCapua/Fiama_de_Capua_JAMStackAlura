@@ -8,12 +8,17 @@
     "lint": "eslint --ignore-path .gitignore .",
     "custom-script": "node ./script-test.js",
     "commit": "cz",
+    "test": "jest",
+    "test:watch": "jest --watch",
     "test:integration:open": "cypress open",
     "test:integration": "cypress run --headless"
   },
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
+    "@types/jest": "^26.0.22",
+    "eslint-plugin-jest": "^24.3.5",
     "framer-motion": "^3.10.0",
+    "jest": "^26.6.3",
     "next": "^10.0.8",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",

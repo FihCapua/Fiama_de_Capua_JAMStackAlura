@@ -1,7 +1,7 @@
 /* eslint-disable func-names */
 import styled, { css } from 'styled-components';
 import { breakPointsMedia } from '../../../../theme/utils/breakpointsMedia';
-import { propToStyle } from '../../../../theme/utils/propToStyle';
+import { propToStyle } from '../../../../theme/utils/propToStyle/index';
 
 const Container = styled.div`
     width: 100%;
