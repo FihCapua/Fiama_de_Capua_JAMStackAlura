@@ -55,16 +55,27 @@ export default function Menu(props) {
             );
           })}
           <NavBar.RightSide>
-            <Text
-              tag="a"
-              variant="paragraph1"
+            <button
+              type="button"
+              name="contato"
               style={{
-                color: '#e1a7f9',
+                backgroundColor: 'transparent',
+                border: 'none',
+                outline: '0',
+                cursor: 'pointer',
               }}
-              onClick={() => websitePageContext.toggleRegisterModal()}
             >
-              Contato
-            </Text>
+              <Text
+                tag="a"
+                variant="paragraph1"
+                style={{
+                  color: '#e1a7f9',
+                }}
+                onClick={() => websitePageContext.toggleRegisterModal()}
+              >
+                Contato
+              </Text>
+            </button>
           </NavBar.RightSide>
         </NavBar.CentralSide>
       </NavBar.WrapperMenu>

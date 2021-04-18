@@ -51,6 +51,7 @@ function FormContent() {
         flexWrap: 'wrap',
         justifyContent: 'center',
         borderRadius: '5px',
+        marginTop: '-85px',
       }}
       onSubmit={(event) => {
         event.preventDefault();
@@ -62,31 +63,6 @@ function FormContent() {
           email: userInfo.email,
           message: userInfo.message,
         };
-
-        // eslint-disable-next-line no-unused-expressions
-        fetch('https://contact-form-api-jamstack.herokuapp.com/message', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(userDTO),
-        })
-          .then((respostaDoServidor) => {
-            if (respostaDoServidor.ok) {
-              respostaDoServidor.json();
-            }
-            throw new Error('Não foi possível cadastrar o usuário');
-          })
-          .then((respostaConvertidaEmObjeto) => {
-            setSubmissionStatus(formStates.DONE);
-            // eslint-disable-next-line no-console
-            console.log(respostaConvertidaEmObjeto);
-          })
-          .catch((error) => {
-            setSubmissionStatus(formStates.ERROR);
-            // eslint-disable-next-line no-console
-            console.log(error);
-          });
 
         setSubmissionStatus(formStates.LOADING);
         setTimeout(() => {
@@ -185,16 +161,18 @@ function FormContent() {
           display="flex"
           justifyContent="center"
           margin="15px 0"
+          width="100%"
         >
           <Lottie
             width="50px"
-            height="50px"
+            height="30px"
             className="lottie-container basic"
             config={{ animationData: loadingAnimation, loop: false, autoplay: true }}
           />
           <p
             style={{
               color: '#fff',
+              fontSize: '12px',
             }}
           >
             Enviando seus dados, aguarde...
@@ -210,13 +188,14 @@ function FormContent() {
         >
           <Lottie
             width="50px"
-            height="50px"
+            height="30px"
             className="lottie-container basic"
             config={{ animationData: successAnimation, loop: false, autoplay: true }}
           />
           <p
             style={{
               color: '#fff',
+              fontSize: '12px',
             }}
           >
             Dados enviados com sucesso
@@ -232,13 +211,14 @@ function FormContent() {
         >
           <Lottie
             width="50px"
-            height="50px"
+            height="30px"
             className="lottie-container basic"
             config={{ animationData: errorAnimation, loop: false, autoplay: true }}
           />
           <p
             style={{
               color: '#fff',
+              fontSize: '12px',
             }}
           >
             Erro no envio dos dados

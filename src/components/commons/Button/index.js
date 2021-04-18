@@ -4,7 +4,7 @@ import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import Link from '../Link';
 import { TextStylesVariantsMap } from '../../foundation/Text/index';
-import { propToStyle } from '../../../theme/utils/propToStyle';
+import { propToStyle } from '../../../theme/utils/propToStyle/index';
 import { breakPointsMedia } from '../../../theme/utils/breakpointsMedia';
 
 const ButtonWrapper = styled.button`
@@ -47,19 +47,15 @@ const ButtonWrapper = styled.button`
   ${breakPointsMedia({
     xs: css`
             width: 75%;
-            height: 10%;
         `,
     md: css`
-            width: 40%;
-            height: 15%;
+            width: 75%;
         `,
     lg: css`
             width: 60%;
-            height: 8%;
         `,
     xl: css`
             width: 60%;
-            height: 8%;
         `,
   })}
 `;
