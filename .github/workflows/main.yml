@@ -65,7 +65,7 @@ jobs:
         run: yarn --prefer-offline
 
       - name: Run Unit Tests
-        run: yarn test
+        run: yarn run test
   integration_tests:
     name: Integration Tests
     runs-on: ubuntu-latest # The type of runner that the job will run on
