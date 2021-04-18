@@ -1,4 +1,3 @@
-import { css } from 'styled-components';
 import { breakPointsMedia } from '../breakpointsMedia';
 
 // eslint-disable-next-line import/prefer-default-export
