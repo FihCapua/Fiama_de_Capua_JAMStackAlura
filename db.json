@@ -14,7 +14,7 @@
         "title": "Casa Criativa",
         "description": "Projeto com criação de páginas em HTML e CSS e JS e gerenciamento de dados em Node.js",
         "link": "https://github.com/FihCapua/projeto-casa-criativa",
-        "slug": "projeto-casa-criativa"
+        "slug": "casa-criativa"
       },
       {
         "id": "#3",
@@ -30,7 +30,7 @@
         "title": "BatuqueQuiz",
         "description": "Projeto criado durante a Segunda Imersão Alura de - React, Styled Components e Next.JS",
         "link": "https://github.com/FihCapua/batuque-quiz",
-        "slug": "batuque-quiz"
+        "slug": "batuquequiz"
       }
     ]
   }

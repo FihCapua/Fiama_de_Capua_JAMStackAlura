@@ -44,8 +44,8 @@ export default function Menu(props) {
 
             return (
               <ul key={key}>
-                <li key={link.url}>
-                  <NextLink href={link.url}>
+                <li>
+                  <NextLink href={link?.url}>
                     <Text tag="a" variant="paragraph1" href={link.url}>
                       {link.texto}
                     </Text>

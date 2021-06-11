@@ -47,13 +47,10 @@ DetailsWrapper.Section = styled.div`
 `;
 
 DetailsWrapper.Title = styled.h2`
-    width: 100%;
-    text-align: center;
     color: ${function (props) {
-    return props.theme.colors.primary.main.contrastText;
+    return props.theme.colors.secondary.main.color;
   }};
-    ${TextStylesVariantsMap.title}
-    padding: 35px 0;
+    ${TextStylesVariantsMap.paragraph1}
 `;
 
 DetailsWrapper.ImgSlug = styled.img`
@@ -102,17 +99,10 @@ DetailsWrapper.Content = styled.div`
   })}
 `;
 
-DetailsWrapper.Title = styled.p`
-    color: ${function (props) {
-    return props.theme.colors.secondary.main.color;
-  }};
-    ${TextStylesVariantsMap.paragraph1}
-`;
-
 DetailsWrapper.Text = styled.p`
     width: 100%;
     color: ${function (props) {
-    return props.theme.colors.primary.main.contrastText;
+    return props.theme.colors.background.main.color;
   }};
     ${TextStylesVariantsMap.paragraph1}
 `;
@@ -120,6 +110,14 @@ DetailsWrapper.Text = styled.p`
 DetailsWrapper.Link = styled.div`
     width: 100%;
     ${TextStylesVariantsMap.paragraph1}
+
+    &:hover,
+    &:focus {
+        color: ${function (props) {
+    return props.theme.colors.secondary.main.contrastText;
+  }};
+    }
+
     ${breakPointsMedia({
     xs: css`
             width: 100%;
